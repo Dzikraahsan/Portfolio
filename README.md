@@ -7,7 +7,7 @@ Ini adalah website portofolio pribadi saya yang berisi informasi tentang saya, s
 
 ## 📸 Tampilan
 
-![Tampilan Portfolio](https://res.cloudinary.com/da4fjxm1e/image/upload/v1758700234/Screenshot_2025-09-24_145126_xvogbh.png)
+![Tampilan Portfolio](https://res.cloudinary.com/da4fjxm1e/image/upload/v1759411515/Screenshot_2025-10-02_202513_ilptbv.png)
 
 ## ✨ Fitur
 
