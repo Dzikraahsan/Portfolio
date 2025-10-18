@@ -10,7 +10,7 @@ const Projects = () => {
       description: "Personal portfolio website created using HTML, CSS, and Javascript.",
       technologies: ["JavaScript", "Bootstrap", "HTML/CSS"],
       github: "https://github.com/Dzikraahsan/Portfolio",
-      demo: "https://portfoliodzikra2.vercel.app",
+      demo: "https://portfoliodzikra-2.vercel.app/",
     },
     {
       title: "Salary Management System",
