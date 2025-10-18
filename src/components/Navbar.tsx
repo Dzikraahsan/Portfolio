@@ -27,9 +27,9 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-lg border-b" : "bg-transparent"
         }`}
     >
-      <div className="container mx-auto px-12 py-4"> {/* Ubah px-4 menjadi px-8 untuk padding lebih lebar */}
+      <div className="container mx-auto px-12 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold text-[#4ca1af] bg-clip-text text-transparent">
+          <a href="#home" className="text-2xl font-bold text-[#4ca1af]">
             DZII27
           </a>
 

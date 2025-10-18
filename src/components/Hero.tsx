@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container mx-auto text-center">
         <div className="mb-8 animate-fade-in">
           <h1 className="text-5xl md:text-5xl font-bold mb-4">
-            Hi, I'm <span className="bg-gradient-to-r text-[#4ca1af]  bg-clip-text text-transparent">Dzikra Ahsan Imawan</span>
+            Hi, I'm <span className="bg-gradient-to-r text-[#4ca1af]">Dzikra Ahsan Imawan</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-2">Front-End Developer</p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -16,8 +16,8 @@ const Hero = () => {
         </div>
 
         <div className="flex items-center justify-center gap-4 mb-8">
-          <Button asChild>
-            <a href="#projects" className="bg-[#4ca1af] hover:bg-[#2c3e50]">View My Project</a>
+          <Button asChild className="bg-[#4ca1af] hover:bg-[#2c3e50] text-white !important">
+            <a href="#projects">View My Project</a>
           </Button>
           <Button variant="outline" className="bg-[#fff] hover:bg-[#2c3e50] text-dark border-black hover:border-[#212327]" asChild>
             <a href="#contact">Contact Me</a>
