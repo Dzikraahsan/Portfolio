@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-12 py-4"> {/* Ubah px-4 menjadi px-8 untuk padding lebih lebar */}
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+          <a href="#home" className="text-2xl font-bold text-[#4ca1af] bg-clip-text text-transparent">
             DZII27
           </a>
 

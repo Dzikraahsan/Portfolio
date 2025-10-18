@@ -36,7 +36,7 @@ const Contact = () => {
                 <div>
                   <Textarea placeholder="Your Message" rows={5} required />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-black hover:border-[#212327]">
                   Send Message
                 </Button>
               </form>
@@ -47,7 +47,7 @@ const Contact = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-primary mt-1" />
+                  <Mail className="h-6 w-6 text-[#4ca1af] hover:text-[#2c3e50] mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <p className="text-muted-foreground">dzikraahsan10@example.com</p>
@@ -59,7 +59,7 @@ const Contact = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-primary mt-1" />
+                  <Phone className="h-6 w-6 text-[#4ca1af] hover:text-[#2c3e50] mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
                     <p className="text-muted-foreground">+62 831 3531 9058</p>
@@ -71,7 +71,7 @@ const Contact = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-primary mt-1" />
+                  <MapPin className="h-6 w-6 text-[#4ca1af] hover:text-[#2c3e50] mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-muted-foreground">Majalengka, Jawa Barat</p>
