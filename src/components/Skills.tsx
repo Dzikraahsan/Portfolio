@@ -5,15 +5,27 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vue.js", "HTML/CSS"],
+      skills: ["React", "Tailwind CSS", "JavaScript", "TypeScript", "HTML/CSS"],
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "REST API"],
+      title: "Backend & Database",
+      skills: ["Node.js", "Python", "MySQL", "SQL", "PHP", "TIDB", "FireBase"],
+    },
+    {
+      title: "Framework",
+      skills: ["Laravel", "Bootstrap", "Vue", "Vite", "Tailwind"],
+    },
+    {
+      title: "Deployments",
+      skills: ["GitHub", "Vercel", "Railway", "Cloudynary"],
     },
     {
       title: "Tools & Others",
-      skills: ["Git", "Docker", "VS Code", "Figma", "AWS", "CI/CD"],
+      skills: ["Git", "VS Code", "Figma", "Canva"],
+    },
+    {
+      title: "Gaming",
+      skills: ["eFootball", "Clash Of Clans"],
     },
   ];
 
@@ -21,7 +33,7 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
-        
+
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {skillCategories.map((category) => (
             <Card key={category.title}>

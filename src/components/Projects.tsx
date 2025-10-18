@@ -6,25 +6,32 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online shopping platform with payment integration and admin dashboard.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      demo: "https://example.com",
+      title: "Portfolio",
+      description: "Personal portfolio website created using HTML, CSS, and Javascript.",
+      technologies: ["JavaScript", "Bootstrap", "HTML/CSS"],
+      github: "https://github.com/Dzikraahsan/Portfolio",
+      demo: "https://portfoliodzikra2.vercel.app",
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management tool with real-time updates and team features.",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
-      github: "https://github.com",
-      demo: "https://example.com",
+      title: "Salary Management System",
+      description: "Create a salary management system website using PHP, HTML, and CSS.",
+      technologies: ["PHP", "MySQL", "Bootstrap", "HTML/CSS"],
+      github: "https://github.com/Dzikraahsan/Management_gaji",
+      demo: "",
     },
     {
-      title: "Weather Dashboard",
-      description: "A beautiful weather application showing forecasts and historical data.",
-      technologies: ["React", "Tailwind CSS", "Weather API", "Chart.js"],
-      github: "https://github.com",
-      demo: "https://example.com",
+      title: "Web School",
+      description: "Create a school website using PHP, HTML, CSS, and Javascript.",
+      technologies: ["PHP", "MySQL", "Bootstrap", "JavaScript", "HTML/CSS"],
+      github: "https://github.com/Dzikraahsan/web_sekolah",
+      demo: "",
+    },
+    {
+      title: "Web Dream Home",
+      description: "Create a Dream Home website using Laravel, PHP, HTML and CSS.",
+      technologies: ["Laravel", "PHP", "HTML/CSS"],
+      github: "https://github.com/Dzikraahsan/dream_home/tree/main",
+      demo: "",
     },
   ];
 
@@ -32,7 +39,7 @@ const Projects = () => {
     <section id="projects" className="py-20 px-4">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Featured Projects</h2>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col">

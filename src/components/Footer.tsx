@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -7,22 +7,22 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © 2024 Portfolio. Built with React & Tailwind CSS.
+            © 2025 Dzikra Ahsan Imawan. All Right Reserved.
           </p>
-          
+
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Dzikraahsan" target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-4 w-4" />
+              <a href="https://www.instagram.com/dzii27/?__pwa=1" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-4 w-4" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="mailto:your.email@example.com">
+              <a href="mailto:dzikraahsan10@gmail.com">
                 <Mail className="h-4 w-4" />
               </a>
             </Button>

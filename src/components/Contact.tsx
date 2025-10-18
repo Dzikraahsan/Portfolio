@@ -15,7 +15,7 @@ const Contact = () => {
     <section id="contact" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Get In Touch</h2>
-        
+
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card>
             <CardHeader>
@@ -50,7 +50,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">your.email@example.com</p>
+                    <p className="text-muted-foreground">dzikraahsan10@example.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -62,7 +62,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+62 123 4567 8900</p>
+                    <p className="text-muted-foreground">+62 831 3531 9058</p>
                   </div>
                 </div>
               </CardContent>
@@ -74,7 +74,7 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-muted-foreground">Jakarta, Indonesia</p>
+                    <p className="text-muted-foreground">Majalengka, Jawa Barat</p>
                   </div>
                 </div>
               </CardContent>

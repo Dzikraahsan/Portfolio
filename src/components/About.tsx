@@ -5,21 +5,17 @@ const About = () => {
     <section id="about" className="py-20 px-4">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
-        
-        <div className="max-w-3xl mx-auto">
+
+        <div className="max-w-4xl mx-auto">
           <Card>
             <CardContent className="p-8">
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                I'm a passionate full stack developer with experience in building modern web applications. 
-                I love turning complex problems into simple, beautiful, and intuitive solutions.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                With a strong foundation in both frontend and backend technologies, I create seamless 
-                user experiences backed by robust server-side logic.
+                I'm a 12th-grade student majoring in Software Engineering at SMKN 1 Maja.
+                I'm interested in front-end development and continue to hone my programming skills.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                projects, or sharing my knowledge with the developer community.
+                In the future, I'm determined to become a professional front-end developer capable of
+                creating useful and innovative digital solutions.
               </p>
             </CardContent>
           </Card>
