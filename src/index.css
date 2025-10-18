@@ -91,8 +91,16 @@ All colors MUST be HSL.
 }
 
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('public/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -101,15 +109,17 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Pretendard-Regular' !important;
+    font-family: 'Pretendard', sans-serif !important;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Pretendard-Regular' !important;
+    font-family: 'Pretendard', sans-serif !important;
   }
 
   html {
     scroll-behavior: smooth;
   }
 }
+
+
