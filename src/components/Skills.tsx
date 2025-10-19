@@ -32,7 +32,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {skillCategories.map((category) => (
