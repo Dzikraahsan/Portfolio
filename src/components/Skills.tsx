@@ -13,11 +13,11 @@ const Skills = () => {
     },
     {
       title: "Framework",
-      skills: ["Laravel", "Bootstrap", "Vue", "Vite", "Tailwind"],
+      skills: ["Laravel", "Bootstrap CSS", "Vue", "Vite", "Tailwind CSS"],
     },
     {
       title: "Deployments",
-      skills: ["GitHub", "Vercel", "Railway", "Cloudynary"],
+      skills: ["GitHub", "Vercel", "Railway", "Cloudinary"],
     },
     {
       title: "Tools & Others",

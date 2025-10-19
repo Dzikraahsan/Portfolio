@@ -50,7 +50,7 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden bg-transparent hover:bg-[#4ca1af]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -59,17 +59,19 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block text-foreground/80 hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="absolute left-0 mt-4 pb-4 bg-[#4ca1af] rounded-r-lg p-3 w-fit text-left">
+            <div className="flex flex-col items-start space-y-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-white font-semibold hover:bg-[#3b8894] px-3 py-2 rounded-md w-fit"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         )}
       </div>

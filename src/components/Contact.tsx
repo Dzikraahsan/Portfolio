@@ -24,19 +24,75 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
+                <Input
+                  placeholder="Your Name"
+                  required
+                  className="
+                    border-2 border-transparent
+                    focus:border-[#4ca1af]
+                    focus:ring-0
+                    focus:ring-offset-0
+                    outline-none
+                    shadow-none
+                    !ring-0
+                    !ring-offset-0
+                    transition-colors
+                    duration-200"/>
                 <div>
-                  <Input placeholder="Your Name" required />
+
+                  <Input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                    className="
+                      border-2 border-transparent
+                      focus:border-[#4ca1af]
+                      focus:ring-0
+                      focus:ring-offset-0
+                      outline-none
+                      shadow-none
+                      !ring-0
+                      !ring-offset-0
+                      transition-colors
+                      duration-200"/>
                 </div>
+
                 <div>
-                  <Input type="email" placeholder="Your Email" required />
+                  <Input
+                    placeholder="Subject"
+                    required
+                    className="
+                      border-2 border-transparent
+                      focus:border-[#4ca1af]
+                      focus:ring-0
+                      focus:ring-offset-0
+                      outline-none
+                      shadow-none
+                      !ring-0
+                      !ring-offset-0
+                      transition-colors
+                      duration-200"/>
                 </div>
+                
                 <div>
-                  <Input placeholder="Subject" required />
+                  <Textarea
+                    placeholder="Your Message"
+                    rows={5}
+                    required
+                    className="
+                      border-2 border-transparent
+                      focus:border-[#4ca1af]
+                      focus:ring-0
+                      focus:ring-offset-0
+                      outline-none
+                      shadow-none
+                      !ring-0
+                      !ring-offset-0
+                      transition-colors
+                      duration-200"/>
                 </div>
-                <div>
-                  <Textarea placeholder="Your Message" rows={5} required />
-                </div>
-                <Button type="submit" className="w-full bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-black hover:border-[#212327]">
+
+                <Button variant="outline" type="submit" className="flex-1 w-full bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#212327] hover:border-[#4ca1af]">
                   Send Message
                 </Button>
               </form>
@@ -50,7 +106,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-[#4ca1af] hover:text-[#2c3e50] mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">dzikraahsan10@example.com</p>
+                    <p className="text-muted-foreground">dzikraahsan10@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
