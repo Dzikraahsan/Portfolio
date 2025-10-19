@@ -56,13 +56,13 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm" asChild className="flex-1 bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#212327] hover:border-[#4ca1af]">
+                  <Button variant="outline" size="sm" asChild className="flex-1 bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af]">
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm" asChild className="flex-1 bg-[#eaebed] hover:bg-[#2c3e50] text-[#212327] hover:text-white border-black hover:border-[#4ca1af]">
+                  <Button variant="outline" size="sm" asChild className="flex-1 bg-[#eaebed] hover:bg-[#2c3e50] text-[#212327] hover:text-white border-[#426370] hover:border-[#4ca1af]">
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Demo

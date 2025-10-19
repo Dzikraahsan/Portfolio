@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Contact</h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card>
@@ -92,7 +92,7 @@ const Contact = () => {
                       duration-200"/>
                 </div>
 
-                <Button variant="outline" type="submit" className="flex-1 w-full bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#212327] hover:border-[#4ca1af]">
+                <Button variant="outline" type="submit" className="flex-1 w-full bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af]">
                   Send Message
                 </Button>
               </form>

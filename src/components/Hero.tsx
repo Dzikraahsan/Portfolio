@@ -16,10 +16,10 @@ const Hero = () => {
         </div>
 
         <div className="flex items-center justify-center gap-4 mb-8">
-          <Button variant="outline" asChild className="bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#212327] hover:border-[#4ca1af] !important">
+          <Button variant="outline" asChild className="bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af] !important">
             <a href="#projects">View My Project</a>
           </Button>
-          <Button variant="outline" className="bg-[#eaebed] hover:bg-[#2c3e50] text-[#212327] hover:text-white border-black hover:border-[#4ca1af]" asChild>
+          <Button variant="outline" className="bg-[#eaebed] hover:bg-[#2c3e50] text-[#212327] hover:text-white border-[#426370] hover:border-[#4ca1af]" asChild>
             <a href="#contact">Contact Me</a>
           </Button>
         </div>
@@ -53,7 +53,7 @@ const Hero = () => {
               <img
                 src="https://api.iconify.design/logos:tailwindcss.svg"
                 alt="Tailwind CSS"
-                className="h-10 w-10"
+                className="h-5 w-10"
               />
               <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                 Tailwind
@@ -64,7 +64,7 @@ const Hero = () => {
               <img
                 src="https://api.iconify.design/logos:typescript.svg"
                 alt="TypeScript"
-                className="h-7 w-7"
+                className="h-5 w-7"
               />
               <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                 TypeScript

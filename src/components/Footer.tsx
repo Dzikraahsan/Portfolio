@@ -11,17 +11,17 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" className="bg-transparent hover:bg-[#4ca1af]" asChild>
               <a href="https://github.com/Dzikraahsan" target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" className="bg-transparent hover:bg-[#4ca1af]" asChild>
               <a href="https://www.instagram.com/dzii27/?__pwa=1" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-4 w-4" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" className="bg-transparent hover:bg-[#4ca1af]" asChild>
               <a href="mailto:dzikraahsan10@gmail.com">
                 <Mail className="h-4 w-4" />
               </a>
