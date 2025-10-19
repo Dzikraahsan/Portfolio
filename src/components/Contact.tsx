@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Get In Touch</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card>
