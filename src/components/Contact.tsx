@@ -28,7 +28,7 @@ const Contact = () => {
                   placeholder="Your Name"
                   required
                   className="
-                    border-2 border-transparent
+                    border-2 border-[#eaebed]
                     focus:border-[#4ca1af]
                     focus:ring-0
                     focus:ring-offset-0
@@ -45,7 +45,7 @@ const Contact = () => {
                     placeholder="Your Email"
                     required
                     className="
-                      border-2 border-transparent
+                      border-2 border-[#eaebed]
                       focus:border-[#4ca1af]
                       focus:ring-0
                       focus:ring-offset-0
@@ -62,7 +62,7 @@ const Contact = () => {
                     placeholder="Subject"
                     required
                     className="
-                      border-2 border-transparent
+                      border-2 border-[#eaebed]
                       focus:border-[#4ca1af]
                       focus:ring-0
                       focus:ring-offset-0
@@ -73,14 +73,14 @@ const Contact = () => {
                       transition-colors
                       duration-200"/>
                 </div>
-                
+
                 <div>
                   <Textarea
                     placeholder="Your Message"
                     rows={5}
                     required
                     className="
-                      border-2 border-transparent
+                      border-2 border-[#eaebed]
                       focus:border-[#4ca1af]
                       focus:ring-0
                       focus:ring-offset-0
