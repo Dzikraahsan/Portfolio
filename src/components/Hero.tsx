@@ -53,7 +53,7 @@ const Hero = () => {
               <img
                 src="https://api.iconify.design/logos:tailwindcss.svg"
                 alt="Tailwind CSS"
-                className="h-5 w-10"
+                className="h-5 w-12"
               />
               <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                 Tailwind
@@ -64,7 +64,7 @@ const Hero = () => {
               <img
                 src="https://api.iconify.design/logos:typescript.svg"
                 alt="TypeScript"
-                className="h-5 w-7"
+                className="h-5 w-10"
               />
               <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                 TypeScript
