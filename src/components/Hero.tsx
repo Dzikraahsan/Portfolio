@@ -40,7 +40,7 @@ const Hero = () => {
 
             <div className="relative group cursor-pointer">
               <img
-                src="https://res.cloudinary.com/da4fjxm1e/image/upload/v1760871197/logo-vite_hfrhcq.png"
+                src="https://res.cloudinary.com/da4fjxm1e/image/upload/v1761050708/logo-vite_nxctt4.webp"
                 alt="Vite"
                 className="h-5 w-5"
               />
