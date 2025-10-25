@@ -6,6 +6,13 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const projects = [
     {
+      title: "Kaifood",
+      description: "Marketplace website for donut selling business.",
+      technologies: ["React", "VIte", "TypeScript", "Tailwind CSS"],
+      github: "",
+      demo: "",
+    },
+    {
       title: "Portfolio",
       description: "Personal portfolio website created using HTML, CSS, and Javascript.",
       technologies: ["JavaScript", "Bootstrap", "HTML/CSS"],
