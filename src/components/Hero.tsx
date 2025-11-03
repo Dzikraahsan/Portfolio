@@ -11,7 +11,7 @@ const Hero = () => {
           </h1>
           <p className="text-[18px] md:text-2xl font-normal text-muted-foreground mb-2">Front-End Developer</p>
           <p className="text-[12.75px] md:text-[16px] text-muted-foreground max-w-2xl mx-auto">
-            Passionate about creating beautiful and functional web applications
+            interested in front-end development and continue to hone my programming skills.
           </p>
         </div>
 
@@ -24,7 +24,7 @@ const Hero = () => {
           </Button>
         </div>
 
-        <div className="flex flex-col items-center gap-2">
+        {/* <div className="flex flex-col items-center gap-2">
           <span className="text-muted-foreground text-[12px]">Build with:</span>
           <div className="flex items-center gap-4">
             <div className="relative group cursor-pointer">
@@ -71,7 +71,7 @@ const Hero = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

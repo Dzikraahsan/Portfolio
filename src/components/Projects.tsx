@@ -8,8 +8,8 @@ const Projects = () => {
     {
       title: "Kaifood",
       description: "Marketplace website for donut selling business.",
-      technologies: ["React", "VIte", "TypeScript", "Tailwind CSS"],
-      github: "",
+      technologies: ["React JS", "Vite", "TypeScript", "Tailwind CSS"],
+      github: "https://github.com/Dzikraahsan/kaifood",
       demo: "https://www.kaifood.web.id/",
     },
     {
