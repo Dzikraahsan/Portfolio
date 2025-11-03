@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Kaifood",
-      description: "Marketplace website for donut selling business.",
+      description: "Marketplace website for home made food selling business.",
       technologies: ["React JS", "Vite", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/Dzikraahsan/kaifood",
       demo: "https://www.kaifood.web.id/",
