@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-12 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold text-[#4ca1af]">
+          <a href="#home" className="text-2xl organetto-700 text-[#4ca1af]">
             DZII27
           </a>
 

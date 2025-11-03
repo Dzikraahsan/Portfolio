@@ -10,7 +10,7 @@ const Projects = () => {
       description: "Marketplace website for donut selling business.",
       technologies: ["React", "VIte", "TypeScript", "Tailwind CSS"],
       github: "",
-      demo: "",
+      demo: "https://www.kaifood.web.id/",
     },
     {
       title: "Portfolio",
