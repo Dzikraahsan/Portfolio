@@ -180,8 +180,8 @@ All colors MUST be HSL.
 
 .organetto-700 {
   font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 700;
+  src: url('/fonts/Organetto-Bold.woff2') format('woff2');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
