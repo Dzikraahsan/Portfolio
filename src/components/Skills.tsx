@@ -93,8 +93,11 @@ const Skills = () => {
                             className="w-6 h-8 flex-shrink-0 object-contain cursor-pointer transition-transform hover:scale-110"
                           />
                         </TooltipTrigger>
-                        <TooltipContent>
-                          <p>{skill.name}</p>
+                        <TooltipContent
+                          side="top"
+                          className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm max-w-[200px] z-50"
+                        >
+                          <p className="truncate">{skill.name}</p>
                         </TooltipContent>
                       </Tooltip>
 
