@@ -20,7 +20,7 @@ const Contact = () => {
           <Card>
             <CardHeader>
               <CardTitle>Send Message</CardTitle>
-              <CardDescription>Fill out the form below and I'll get back to you soon!</CardDescription>
+              <CardDescription className="text-[14px]">Fill out the form below and I'll get back to you soon!</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -43,23 +43,6 @@ const Contact = () => {
                   <Input
                     type="email"
                     placeholder="Your Email"
-                    required
-                    className="
-                      border-2 border-[#eaebed]
-                      focus:border-[#4ca1af]
-                      focus:ring-0
-                      focus:ring-offset-0
-                      outline-none
-                      shadow-none
-                      !ring-0
-                      !ring-offset-0
-                      transition-colors
-                      duration-200"/>
-                </div>
-
-                <div>
-                  <Input
-                    placeholder="Subject"
                     required
                     className="
                       border-2 border-[#eaebed]
@@ -99,7 +82,7 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          <div className="space-y-6">
+          <div className="space-y-12 mt-2">
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
