@@ -1,5 +1,11 @@
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Skills = () => {
   const skillCategories = [
@@ -57,7 +63,8 @@ const Skills = () => {
       title: "Gaming",
       skills: [
         {
-          name: "eFootball", logoUrl: "https://res.cloudinary.com/da4fjxm1e/image/upload/v1762339157/efootball-logo_jrnfza.png", percentage: 99 },
+          name: "eFootball", logoUrl: "https://res.cloudinary.com/da4fjxm1e/image/upload/v1762339157/efootball-logo_jrnfza.png", percentage: 99
+        },
         { name: "Clash Of Clans", logoUrl: "https://res.cloudinary.com/da4fjxm1e/image/upload/v1762339268/clash-of-clans-logo_kwt20q.png", percentage: 99 },
       ],
     },
@@ -68,37 +75,46 @@ const Skills = () => {
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {skillCategories.map((category) => (
-            <Card key={category.title} className="overflow-hidden">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-center text-xl">{category.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center gap-3">
-                    <img
-                      src={skill.logoUrl}
-                      alt={skill.name}
-                      className="w-6 h-8 flex-shrink-0 object-contain"
-                    />
+        <TooltipProvider delayDuration={0} skipDelayDuration={0}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {skillCategories.map((category) => (
+              <Card key={category.title} className="overflow-hidden">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-center text-xl">{category.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {category.skills.map((skill) => (
+                    <div key={skill.name} className="flex items-center gap-3">
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <img
+                            src={skill.logoUrl}
+                            alt={skill.name}
+                            className="w-6 h-8 flex-shrink-0 object-contain cursor-pointer transition-transform hover:scale-110"
+                          />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{skill.name}</p>
+                        </TooltipContent>
+                      </Tooltip>
 
-                    <div className="flex-1">
-                      <Progress
-                        value={skill.percentage}
-                        className="h-4 [&>div]:bg-[#4ca1af]"
-                      />
-                    </div>
+                      <div className="flex-1">
+                        <Progress
+                          value={skill.percentage}
+                          className="h-4 rounded-md [&>div]:bg-[#4ca1af]"
+                        />
+                      </div>
 
-                    <div className="w-9 text-right">
-                      <span className="organetto-700 text-sm">{skill.percentage}%</span>
+                      <div className="w-9 text-right">
+                        <span className="organetto-700 text-sm">{skill.percentage}%</span>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                  ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </TooltipProvider>
       </div>
     </section>
   );
