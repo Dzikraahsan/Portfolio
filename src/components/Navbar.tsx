@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-lg border-b" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-lg" : "bg-transparent"
         }`}
     >
       <div className="container mx-auto px-12 py-4">
@@ -80,10 +80,11 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className={`absolute left-0 mt-4 pb-4 bg-[#4ca1af] rounded-r-lg p-3 w-fit text-left transition-all duration-300 ${isClosing
+          <div className={`absolute left-0 mt-4 pb-4 bg-[#4ca1af] rounded-r-lg p-3 w-fit text-left transition-all duration-300 ${
+            isClosing
               ? "animate-out slide-out-to-left-10 fade-out"
               : "animate-in slide-in-from-left-10 fade-in"
-            }`}>
+          }`}>
             <div className="flex flex-col items-start space-y-2">
               {navLinks.map((link) => (
                 <a
