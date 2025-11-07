@@ -186,6 +186,27 @@ All colors MUST be HSL.
   font-display: swap;
 }
 
+/* ====== ANIMASI ZOOM-IN (Navbar.tsx) ====== */
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Kelas utama */
+.zoom-in {
+  animation: zoom-in 1s ease-in-out forwards;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
 @layer base {
   body {
     @apply bg-background text-foreground;
