@@ -87,15 +87,18 @@ const Skills = () => {
                     <div key={skill.name} className="flex items-center gap-3">
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <img
-                            src={skill.logoUrl}
-                            alt={skill.name}
-                            className="w-6 h-8 flex-shrink-0 object-contain cursor-pointer transition-transform hover:scale-110"
-                          />
+                          <div className="cursor-pointer touch-none">
+                            <img
+                              src={skill.logoUrl}
+                              alt={skill.name}
+                              className="w-6 h-8 flex-shrink-0 object-contain transition-transform hover:scale-110 active:scale-110"
+                            />
+                          </div>
                         </TooltipTrigger>
                         <TooltipContent
-                          side="top"
-                          className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm max-w-[200px] z-50"
+                          side="bottom"
+                          sideOffset={8}
+                          className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm max-w-[200px] z-50 pointer-events-none"
                         >
                           <p className="truncate">{skill.name}</p>
                         </TooltipContent>
@@ -104,7 +107,7 @@ const Skills = () => {
                       <div className="flex-1">
                         <Progress
                           value={skill.percentage}
-                          className="h-4 rounded-md [&>div]:bg-[#4ca1af]"
+                          className="h-4 rounded-md [&>div]:bg-[#4ca1af] [&>div]:rounded-none"
                         />
                       </div>
 
