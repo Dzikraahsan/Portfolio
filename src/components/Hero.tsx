@@ -11,7 +11,7 @@ const Hero = () => {
           </h1>
           <p className="text-[18px] md:text-2xl font-normal text-[#2c3e50] mb-2">Front-End Developer</p>
           <p className="text-[12.75px] md:text-[16px] text-muted-foreground max-w-[39rem] mx-auto">
-            I am interested in front-end development and continue to hone my programming skills.
+            I am interested in front-heavy fullstack developer and continue to hone my programming skills.
           </p>
         </div>
 

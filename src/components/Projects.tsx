@@ -2,6 +2,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+  AOS.init({
+    offset: 100,
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+    disableMutationObserver: true,
+  });
 
 const Projects = () => {
   const projects = [
@@ -47,7 +58,7 @@ const Projects = () => {
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" data-aos="fade-up">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col">
               <CardHeader>

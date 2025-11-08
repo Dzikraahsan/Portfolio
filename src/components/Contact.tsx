@@ -4,6 +4,17 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { toast } from "sonner";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+  AOS.init({
+    offset: 100,
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+    disableMutationObserver: true,
+  });
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -16,7 +27,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Contact</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto" data-aos="fade-up">
           <Card>
             <CardHeader>
               <CardTitle>Send Message</CardTitle>
@@ -82,7 +93,7 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          <div className="space-y-12 mt-2">
+          <div className="space-y-12 mt-2" data-aos="fade-up">
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">

@@ -6,6 +6,17 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+  AOS.init({
+    offset: 100,
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+    disableMutationObserver: true,
+  });
 
 const Skills = () => {
   const skillCategories = [
@@ -76,7 +87,7 @@ const Skills = () => {
         <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
 
         <TooltipProvider delayDuration={0} skipDelayDuration={0}>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" data-aos="fade-up">
             {skillCategories.map((category) => (
               <Card key={category.title} className="overflow-hidden">
                 <CardHeader className="pb-4">

@@ -1,5 +1,16 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+  AOS.init({
+    offset: 100,
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+    disableMutationObserver: true,
+  });
 
 const Footer = () => {
   return (

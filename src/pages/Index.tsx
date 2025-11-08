@@ -12,7 +12,6 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    // ✅ Inisialisasi AOS
     AOS.init({
       offset: 100,
       duration: 800,
@@ -24,25 +23,22 @@ const Index = () => {
 
     const timer = setTimeout(() => AOS.refreshHard(), 300);
 
-    // ✅ Simpan posisi scroll sebelum reload
     const saveScroll = () => {
       sessionStorage.setItem("scrollPosition", window.scrollY.toString());
     };
     window.addEventListener("beforeunload", saveScroll);
 
-    // ✅ Setelah reload, kembalikan posisi scroll ke sebelumnya
     const restoreScroll = () => {
       const savedY = sessionStorage.getItem("scrollPosition");
       if (savedY) {
         window.scrollTo({
           top: parseFloat(savedY),
-          behavior: "instant", // langsung tanpa animasi biar tidak bergeser
+          behavior: "instant",
         });
       }
     };
     window.addEventListener("load", restoreScroll);
 
-    // Bersihkan listener
     return () => {
       clearTimeout(timer);
       window.removeEventListener("beforeunload", saveScroll);
@@ -54,27 +50,27 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      <div data-aos="zoom-in" data-aos-delay="150">
+      <div data-aos="zoom-in">
         <Hero />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="100">
+      <div data-aos="fade-up">
         <About />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="150">
+      <div data-aos="fade-up">
         <Skills />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div data-aos="fade-up">
         <Projects />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div data-aos="fade-up">
         <Contact />
       </div>
 
-      <div data-aos="fade-in" data-aos-delay="200">
+      <div data-aos="fade-in">
         <Footer />
       </div>
     </div>
