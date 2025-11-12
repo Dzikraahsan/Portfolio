@@ -85,13 +85,13 @@ const Navbar = () => {
               ? "animate-out slide-out-to-left-10 fade-out"
               : "animate-in slide-in-from-left-10 fade-in"
           }`}>
-            <div className="flex flex-col items-start space-y-2">
+            <div className="flex flex-col items-start space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={handleLinkClick}
-                  className="text-white font-semibold hover:bg-[#3b8894] px-3 py-2 rounded-md w-fit transition-colors"
+                  className="text-white font-semibold hover:bg-[#3b8894] px-3 py-2 pl-2 rounded-md w-fit transition-colors"
                 >
                   {link.label}
                 </a>

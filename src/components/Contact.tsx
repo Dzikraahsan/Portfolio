@@ -25,13 +25,13 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 organetto-600">Contact</h2>
+        <h2 className="text-[25px] font-bold text-center mb-9 md:mb-12 md:text-4xl organetto-600">Contact</h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto" data-aos="fade-up">
           <Card>
             <CardHeader>
-              <CardTitle>Send Message</CardTitle>
-              <CardDescription className="text-[14px]">Fill out the form below and I'll get back to you soon!</CardDescription>
+              <CardTitle className="text-[17px]">Send Message</CardTitle>
+              <CardDescription className="text-[11px]">Fill out the form below and I'll get back to you soon!</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -48,7 +48,9 @@ const Contact = () => {
                     !ring-0
                     !ring-offset-0
                     transition-colors
-                    duration-200"/>
+                    duration-200
+                    placeholder:text-[13px]
+                    placeholder:translate-y-[-1px] "/>
                 <div>
 
                   <Input
@@ -65,7 +67,9 @@ const Contact = () => {
                       !ring-0
                       !ring-offset-0
                       transition-colors
-                      duration-200"/>
+                      duration-200
+                      placeholder:text-[13px]
+                      placeholder:translate-y-[-1px] "/>
                 </div>
 
                 <div>
@@ -83,7 +87,8 @@ const Contact = () => {
                       !ring-0
                       !ring-offset-0
                       transition-colors
-                      duration-200"/>
+                      duration-200
+                      placeholder:text-[13px]"/>
                 </div>
 
                 <Button variant="outline" type="submit" className="flex-1 w-full bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af]">

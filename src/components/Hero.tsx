@@ -15,12 +15,16 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <Button variant="outline" asChild className="bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af] !important">
-            <a href="#projects">View Project</a>
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-8">
+          <Button variant="outline" asChild className="bg-[#4ca1af] text-[11px] h-8 md:text-base md:h-full hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af] !important">
+            <a href="#projects">See Project</a>
           </Button>
-          <Button variant="outline" className="bg-[#eaebed] hover:bg-[#2c3e50] text-[#212327] hover:text-white border-[#426370] hover:border-[#4ca1af]" asChild>
+          <Button variant="outline" className="bg-[#eaebed] text-[11px] h-8 md:text-base md:h-full hover:bg-[#2c3e50] text-[#212327] hover:text-white border-[#426370] hover:border-[#4ca1af]" asChild>
             <a href="#contact">Contact</a>
+          </Button>
+          <Button variant="outline" className="bg-[#426370] text-[11px] h-8 md:text-base md:h-full hover:bg-[#2c3e50] text-[#eaebed] hover:text-white border-[#426370] hover:border-[#4ca1af]" asChild>
+            <a href="https://github.com/Dzikraahsan">
+              <Github className="w-4 h-4"/>Github</a>
           </Button>
         </div>
 
