@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 const About = () => {
   return (
     <section id="about" className="py-20 px-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto" data-aos="fade-up">
         <h2 className="text-4xl font-bold text-center mb-12 organetto-600">About Me</h2>
 
         <div className="md:max-w-3xl mx-auto">

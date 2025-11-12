@@ -93,7 +93,7 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          <div className="space-y-12 mt-2" data-aos="fade-up">
+          <div className="space-y-12 mt-2 fade-up">
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">

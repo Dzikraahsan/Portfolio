@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Biodata from "@/components/Biodata";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -56,6 +57,10 @@ const Index = () => {
 
       <div data-aos="fade-up">
         <About />
+      </div>
+
+      <div data-aos="fade-up">
+        <Biodata />
       </div>
 
       <div data-aos="fade-up">
