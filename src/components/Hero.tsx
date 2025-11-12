@@ -3,7 +3,7 @@ import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-10 md:pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-0 md:pt-12">
       <div className="container mx-auto text-center">
         <div className="mb-8 animate-fade-in">
           <h1 className="text-[25px] md:text-[48px] font-bold mb-4">
