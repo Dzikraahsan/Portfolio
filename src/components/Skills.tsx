@@ -84,7 +84,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 organetto-600">Skills</h2>
 
         <TooltipProvider delayDuration={0} skipDelayDuration={0}>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" data-aos="fade-up">

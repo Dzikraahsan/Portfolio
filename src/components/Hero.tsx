@@ -6,11 +6,11 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16">
       <div className="container mx-auto text-center">
         <div className="mb-8 animate-fade-in">
-          <h1 className="text-[31px] md:text-[54px] font-bold mb-4">
-            Hi, I'm <span className="bg-gradient-to-r text-[#4ca1af]">Dzikra Ahsan Imawan</span>
+          <h1 className="text-[25px] md:text-[48px] font-bold mb-4">
+            Hi, I'm <span className="bg-gradient-to-r text-[#4ca1af] organetto-600">Dzikra Ahsan Imawan</span>
           </h1>
           <p className="text-[18px] md:text-2xl font-normal text-[#2c3e50] mb-2">Front-End Developer</p>
-          <p className="text-[12.75px] md:text-[16px] text-muted-foreground max-w-[39rem] mx-auto">
+          <p className="text-[12.75px] md:text-[16px] text-muted-foreground max-w-[25rem] md:max-w-[45rem] mx-auto">
             I am interested in front-heavy fullstack developer and continue to hone my programming skills.
           </p>
         </div>

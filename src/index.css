@@ -212,13 +212,11 @@ All colors MUST be HSL.
   0% {
     opacity: 0;
     transform: translateY(30px);
-    /* mulai agak turun */
   }
 
   100% {
     opacity: 1;
     transform: translateY(0);
-    /* posisi normal */
   }
 }
 
@@ -226,6 +224,13 @@ All colors MUST be HSL.
   animation: fade-up 0.9s ease-out forwards;
   will-change: transform, opacity;
   backface-visibility: hidden;
+}
+
+/* ====== HERO.tsx ====== */
+
+.justify {
+  text-align: justify;
+  text-align-last: center;
 }
 
 @layer base {
