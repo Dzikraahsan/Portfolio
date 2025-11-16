@@ -63,12 +63,12 @@ const Projects = () => {
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col relative">
               {project.isRealProject && (
-                <Badge className="absolute rounded-sm top-7 right-4 bg-[#4ca1af] hover:bg-[#2c3e50] text-primary-foreground">
+                <Badge className="absolute rounded-sm top-7 right-6 bg-[#4ca1af] hover:bg-[#2c3e50] text-primary-foreground">
                   Real Project
                 </Badge>
               )}
               <CardHeader>
-                <CardTitle className="text-[23px] md:text-[26px]">{project.title}</CardTitle>
+                <CardTitle className="text-[21px] md:text-[26px]">{project.title}</CardTitle>
                 <CardDescription className="text-[13px] md:text-[15px] justify2">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col justify-between">
