@@ -5,14 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-  AOS.init({
-    offset: 100,
-    duration: 800,
-    easing: "ease-in-out",
-    once: true,
-    mirror: false,
-    disableMutationObserver: true,
-  });
+AOS.init({
+  offset: 100,
+  duration: 800,
+  easing: "ease-in-out",
+  once: true,
+  mirror: false,
+  disableMutationObserver: true,
+});
 
 const Projects = () => {
   const projects = [
@@ -22,6 +22,7 @@ const Projects = () => {
       technologies: ["React JS", "Vite", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/Dzikraahsan/kaifood",
       demo: "https://www.kaifood.web.id/",
+      isRealProject: true,
     },
     {
       title: "Portfolio",
@@ -60,15 +61,20 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" data-aos="fade-up">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col">
+            <Card key={project.title} className="flex flex-col relative">
+              {project.isRealProject && (
+                <Badge className="absolute rounded-sm top-7 right-4 bg-[#4ca1af] hover:bg-[#2c3e50] text-primary-foreground">
+                  Real Project
+                </Badge>
+              )}
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardTitle className="text-[23px] md:text-[26px]">{project.title}</CardTitle>
+                <CardDescription className="text-[13px] md:text-[15px] justify2">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col justify-between">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline">
+                    <Badge key={tech} variant="outline" className="hover:bg-[#2c3e50] hover:text-[#eaebed]">
                       {tech}
                     </Badge>
                   ))}

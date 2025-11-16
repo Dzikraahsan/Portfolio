@@ -233,6 +233,11 @@ All colors MUST be HSL.
   text-align-last: center;
 }
 
+.justify2{
+  text-align: justify;
+  text-align-last: left;
+}
+
 @layer base {
   body {
     @apply bg-background text-foreground;

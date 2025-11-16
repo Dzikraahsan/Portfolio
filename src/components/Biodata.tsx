@@ -37,7 +37,7 @@ const Biodata = () => {
                                         "Don’t aim to be perfect. Aim to be better than yesterday."
                                     </p>
                                     <p className="text-xs md:text-sm text-muted-foreground/70 text-center mt-2">
-                                        — Dzikra
+                                        — Steve Jobs
                                     </p>
                                 </div>
                             </div>

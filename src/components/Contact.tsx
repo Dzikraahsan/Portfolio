@@ -30,8 +30,8 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto" data-aos="fade-up">
           <Card>
             <CardHeader>
-              <CardTitle className="text-[17px]">Send Message</CardTitle>
-              <CardDescription className="text-[11px]">Fill out the form below and I'll get back to you soon!</CardDescription>
+              <CardTitle className="text-[20px] md:text-2xl">Send Message</CardTitle>
+              <CardDescription className="text-[13px] sm:text-[15px]">Fill out the form below and I'll get back to you soon!</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -98,7 +98,7 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          <div className="space-y-12 mt-2 fade-up">
+          <div className="space-y-12 mt-3 fade-up">
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
