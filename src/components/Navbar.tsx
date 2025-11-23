@@ -50,9 +50,21 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-12 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl organetto-700 text-[#4ca1af]">
-            DZII27
-          </a>
+          <div className="flex items-center gap-3">
+            <img
+              src="https://res.cloudinary.com/da4fjxm1e/image/upload/f_auto,q_auto,w_500//karyawan_foto/b3bkokgekouzrtkfbczw.png"
+              alt="Foto"
+              className="rounded-full h-7 w-7 flex-shrink-0 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <a
+              href="#home"
+              className="text-xl md:text-2xl lg:text-2xl organetto-700 text-[#4ca1af] whitespace-nowrap hover:underline">
+              DZII27
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
