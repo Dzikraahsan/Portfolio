@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="https://res.cloudinary.com/da4fjxm1e/image/upload/f_auto,q_auto,w_500//karyawan_foto/b3bkokgekouzrtkfbczw.png"
+              src="https://res.cloudinary.com/da4fjxm1e/image/upload/f_auto,q_auto,w_500/pp2_zviwy5.png"
               alt="Foto"
               className="rounded-full h-7 w-7 flex-shrink-0 object-cover"
               loading="lazy"
@@ -61,7 +61,7 @@ const Navbar = () => {
 
             <a
               href="#home"
-              className="text-xl md:text-2xl lg:text-2xl organetto-700 text-[#4ca1af] whitespace-nowrap hover:underline">
+              className="text-xl md:text-2xl lg:text-2xl organetto-700 text-[#4ca1af] whitespace-nowrap hover:no-underline">
               DZII27
             </a>
           </div>

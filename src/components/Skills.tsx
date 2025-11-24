@@ -76,7 +76,6 @@ const Skills = () => {
         {
           name: "eFootball", logoUrl: "https://res.cloudinary.com/da4fjxm1e/image/upload/v1762339157/efootball-logo_jrnfza.png", percentage: 99
         },
-        { name: "Clash Of Clans", logoUrl: "https://res.cloudinary.com/da4fjxm1e/image/upload/v1762339268/clash-of-clans-logo_kwt20q.png", percentage: 99 },
       ],
     },
   ];

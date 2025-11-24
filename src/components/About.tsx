@@ -17,7 +17,7 @@ const About = () => {
       <div className="container mx-auto" data-aos="fade-up">
         <h2 className="text-[25px] font-bold text-center mb-7 md:mb-12 md:text-4xl organetto-600">About Me</h2>
 
-        <div className="md:max-w-3xl mx-auto">
+        <div className="md:max-w-[50rem] mx-auto">
           <Card>
             <CardContent className="p-8" data-aos="fade-up">
               <p className="text-[14px] md:text-lg justify text-muted-foreground leading-relaxed mb-4">
