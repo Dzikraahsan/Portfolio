@@ -130,6 +130,21 @@ All colors MUST be HSL.
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'eFootballSans-Regular';
+  src: url('/fonts/eFootballSans-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'eFootballSans-Bold';
+  src: url('/fonts/eFootballSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .organetto-100 {
   font-family: 'Organetto';
   src: url('/fonts/Organetto-Light.woff2') format('woff2');
@@ -241,7 +256,7 @@ All colors MUST be HSL.
 @layer base {
   body {
     @apply bg-background text-foreground;
-    font-family: 'Pretendard', sans-serif !important;
+    font-family: 'eFootballSans-Regular', sans-serif !important;
   }
 
   html {

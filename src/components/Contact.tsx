@@ -50,7 +50,7 @@ const Contact = () => {
                     transition-colors
                     duration-200
                     placeholder:text-[13px]
-                    placeholder:translate-y-[-1px] "/>
+                    placeholder:translate-y-[-1.5px] "/>
                 <div>
 
                   <Input
@@ -69,7 +69,7 @@ const Contact = () => {
                       transition-colors
                       duration-200
                       placeholder:text-[13px]
-                      placeholder:translate-y-[-1px] "/>
+                      placeholder:translate-y-[-1.5px] "/>
                 </div>
 
                 <div>
