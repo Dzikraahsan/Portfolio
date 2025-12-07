@@ -90,6 +90,8 @@ All colors MUST be HSL.
   }
 }
 
+/* ===Pretendard=== */
+
 @font-face {
   font-family: 'Pretendard';
   src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
@@ -105,6 +107,8 @@ All colors MUST be HSL.
   font-style: normal;
   font-display: swap;
 }
+
+/* === Organetto === */
 
 @font-face {
   font-family: 'Organetto';
@@ -130,6 +134,8 @@ All colors MUST be HSL.
   font-display: swap;
 }
 
+/* === eFootball Sans === */
+
 @font-face {
   font-family: 'eFootballSans-Regular';
   src: url('/fonts/eFootballSans-Regular.woff2') format('woff2');
@@ -144,6 +150,18 @@ All colors MUST be HSL.
   font-style: normal;
   font-display: swap;
 }
+
+/* === Formular === */
+
+@font-face {
+  font-family: 'formular-bold';
+  src: url('/fonts/formular-bold.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Class Organetto Font */
 
 .organetto-100 {
   font-family: 'Organetto';
@@ -201,6 +219,34 @@ All colors MUST be HSL.
   font-display: swap;
 }
 
+/* Class Formular Font */
+
+.formular-bold {
+  font-family: 'formular-bold';
+  src: url('/fonts/formular-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Class eFootball Sans */
+
+.efootball-sans-regular {
+  font-family: 'eFootballSans-Regular';
+  src: url('/fonts/eFootballSans-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.efootball-sans-bold {
+  font-family: 'eFootballSans-Bold';
+  src: url('/fonts/eFootballSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ====== ANIMASI ZOOM-IN (Navbar.tsx) ====== */
 
 @keyframes zoom-in {
@@ -241,7 +287,7 @@ All colors MUST be HSL.
   backface-visibility: hidden;
 }
 
-/* ====== HERO.tsx ====== */
+/* ====== ALIGNMENT TEXT ====== */
 
 .justify {
   text-align: justify;

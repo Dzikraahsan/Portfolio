@@ -15,7 +15,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 px-4">
       <div className="container mx-auto" data-aos="fade-up">
-        <h2 className="text-[25px] font-bold text-center mb-7 md:mb-12 md:text-4xl organetto-600">About Me</h2>
+        <h2 className="text-[25px] font-bold text-center mb-7 md:mb-12 md:text-4xl formular-bold">ABOUT ME</h2>
 
         <div className="md:max-w-[50rem] mx-auto">
           <Card>

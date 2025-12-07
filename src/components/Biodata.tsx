@@ -12,7 +12,7 @@ const Biodata = () => {
     return (
         <section id="biodata" className="py-20 px-2">
             <div className="container mx-auto">
-                <h2 className="text-[25px] text-center mb-9 md:mb-12 md:text-4xl organetto-600">Biodata</h2>
+                <h2 className="text-[25px] text-center mb-9 md:mb-12 md:text-4xl formular-bold">BIODATA</h2>
 
                 <div className="md:max-w-3xl mx-auto">
                     <Card>

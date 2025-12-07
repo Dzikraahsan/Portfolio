@@ -61,7 +61,7 @@ const Navbar = () => {
 
             <a
               href="#home"
-              className="text-xl md:text-2xl lg:text-2xl organetto-700 text-[#4ca1af] whitespace-nowrap hover:no-underline">
+              className="text-xl md:text-2xl lg:text-2xl formular-bold text-[#4ca1af] whitespace-nowrap hover:no-underline">
               DZII27
             </a>
           </div>
