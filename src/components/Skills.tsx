@@ -9,14 +9,14 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-  AOS.init({
-    offset: 100,
-    duration: 800,
-    easing: "ease-in-out",
-    once: true,
-    mirror: false,
-    disableMutationObserver: true,
-  });
+AOS.init({
+  offset: 100,
+  duration: 800,
+  easing: "ease-in-out",
+  once: true,
+  mirror: false,
+  disableMutationObserver: true,
+});
 
 const Skills = () => {
   const skillCategories = [
@@ -92,25 +92,32 @@ const Skills = () => {
                 <CardHeader className="pb-4">
                   <CardTitle className="text-center text-xl">{category.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-5">
                   {category.skills.map((skill) => (
                     <div key={skill.name} className="flex items-center gap-3">
-                      <Tooltip>
+                      <Tooltip delayDuration={0}>
                         <TooltipTrigger asChild>
-                          <div className="cursor-pointer touch-none">
+                          <button
+                            type="button"
+                            className="cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded"
+                            aria-label={skill.name}
+                          >
                             <img
                               src={skill.logoUrl}
                               alt={skill.name}
-                              className="w-6 h-8 flex-shrink-0 object-contain transition-transform hover:scale-110 active:scale-110"
+                              className="w-6 h-8 flex-shrink-0 object-contain transition-transform duration-200 hover:scale-110 active:scale-110"
                             />
-                          </div>
+                          </button>
                         </TooltipTrigger>
                         <TooltipContent
-                          side="bottom"
-                          sideOffset={8}
-                          className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm max-w-[200px] z-50 pointer-events-none"
+                          side="top"
+                          align="center"
+                          sideOffset={6}
+                          collisionPadding={10}
+                          avoidCollisions={true}
+                          className="px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100] animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 duration-150"
                         >
-                          <p className="truncate">{skill.name}</p>
+                          {skill.name}
                         </TooltipContent>
                       </Tooltip>
 
