@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -9,16 +10,28 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({
-  offset: 100,
-  duration: 800,
-  easing: "ease-in-out",
-  once: true,
-  mirror: false,
-  disableMutationObserver: true,
-});
-
 const Skills = () => {
+  const [openTooltip, setOpenTooltip] = useState<string | null>(null);
+
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+      disableMutationObserver: true,
+    });
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setOpenTooltip(null);
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
   const skillCategories = [
     {
       title: "Frontend",
@@ -95,27 +108,45 @@ const Skills = () => {
                 <CardContent className="space-y-5">
                   {category.skills.map((skill) => (
                     <div key={skill.name} className="flex items-center gap-3">
-                      <Tooltip delayDuration={0}>
+                      <Tooltip
+                        open={openTooltip === `${category.title}-${skill.name}`}
+                      >
                         <TooltipTrigger asChild>
                           <button
                             type="button"
-                            className="cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded"
+                            className={`cursor-pointer focus:outline-none rounded transition-transform duration-200 ${openTooltip === `${category.title}-${skill.name}`
+                                ? "scale-125"
+                                : "hover:scale-110"
+                              }`}
                             aria-label={skill.name}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              const tooltipId = `${category.title}-${skill.name}`;
+                              setOpenTooltip(prev => prev === tooltipId ? null : tooltipId);
+                            }}
+                            onMouseEnter={() => {
+                              const tooltipId = `${category.title}-${skill.name}`;
+                              setOpenTooltip(tooltipId);
+                            }}
+                            onMouseLeave={() => {
+                              setOpenTooltip(null);
+                            }}
                           >
                             <img
                               src={skill.logoUrl}
                               alt={skill.name}
-                              className="w-6 h-8 flex-shrink-0 object-contain transition-transform duration-200 hover:scale-110 active:scale-110"
+                              className="w-6 h-8 flex-shrink-0 object-contain"
                             />
                           </button>
                         </TooltipTrigger>
                         <TooltipContent
                           side="top"
                           align="center"
-                          sideOffset={6}
+                          sideOffset={8}
                           collisionPadding={10}
                           avoidCollisions={true}
-                          className="px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100] animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 duration-150"
+                          onPointerDownOutside={(e) => e.preventDefault()}
+                          className="px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100]"
                         >
                           {skill.name}
                         </TooltipContent>
