@@ -1,17 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Skills = () => {
   const [openTooltip, setOpenTooltip] = useState<string | null>(null);
+  const [isTouch, setIsTouch] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     AOS.init({
@@ -24,14 +20,44 @@ const Skills = () => {
     });
   }, []);
 
+  // Handle click outside to close tooltip on mobile
   useEffect(() => {
-    const handleClickOutside = () => {
-      setOpenTooltip(null);
+    const handleClickOutside = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('[data-skill-icon]')) {
+        setOpenTooltip(null);
+      }
     };
 
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
+    document.addEventListener("touchend", handleClickOutside, { passive: true });
+    return () => {
+      document.removeEventListener("touchend", handleClickOutside);
+    };
   }, []);
+
+  // Touch handler for mobile - keeps tooltip open
+  const handleTouch = useCallback((e: React.TouchEvent, tooltipId: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsTouch(true);
+    setOpenTooltip(prev => prev === tooltipId ? null : tooltipId);
+  }, []);
+
+  // Mouse handlers for desktop hover
+  const handleMouseEnter = useCallback((tooltipId: string) => {
+    if (!isTouch) {
+      setOpenTooltip(tooltipId);
+    }
+  }, [isTouch]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (!isTouch) {
+      setOpenTooltip(null);
+    }
+    // Reset touch flag after a delay to allow hover to work again
+    setTimeout(() => setIsTouch(false), 100);
+  }, [isTouch]);
+
   const skillCategories = [
     {
       title: "Frontend",
@@ -95,62 +121,49 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 px-4 bg-muted/30">
-      <div className="container mx-auto">
+      <div className="container mx-auto" ref={containerRef}>
         <h2 className="text-[25px] font-bold text-center mb-9 md:mb-12 md:text-4xl formular-bold">SKILLS</h2>
 
-        <TooltipProvider delayDuration={0} skipDelayDuration={0}>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" data-aos="fade-up">
-            {skillCategories.map((category) => (
-              <Card key={category.title} className="overflow-hidden">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-center text-xl">{category.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-5">
-                  {category.skills.map((skill) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" data-aos="fade-up">
+          {skillCategories.map((category) => (
+            <Card key={category.title} className="overflow-hidden">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-center text-xl">{category.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-5">
+                {category.skills.map((skill) => {
+                  const tooltipId = `${category.title}-${skill.name}`;
+                  const isOpen = openTooltip === tooltipId;
+
+                  return (
                     <div key={skill.name} className="flex items-center gap-3">
-                      <Tooltip
-                        open={openTooltip === `${category.title}-${skill.name}`}
-                      >
-                        <TooltipTrigger asChild>
-                          <button
-                            type="button"
-                            className={`cursor-pointer focus:outline-none rounded transition-transform duration-200 ${openTooltip === `${category.title}-${skill.name}`
-                                ? "scale-125"
-                                : "hover:scale-110"
-                              }`}
-                            aria-label={skill.name}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              const tooltipId = `${category.title}-${skill.name}`;
-                              setOpenTooltip(prev => prev === tooltipId ? null : tooltipId);
-                            }}
-                            onMouseEnter={() => {
-                              const tooltipId = `${category.title}-${skill.name}`;
-                              setOpenTooltip(tooltipId);
-                            }}
-                            onMouseLeave={() => {
-                              setOpenTooltip(null);
-                            }}
-                          >
-                            <img
-                              src={skill.logoUrl}
-                              alt={skill.name}
-                              className="w-6 h-8 flex-shrink-0 object-contain"
-                            />
-                          </button>
-                        </TooltipTrigger>
-                        <TooltipContent
-                          side="top"
-                          align="center"
-                          sideOffset={8}
-                          collisionPadding={10}
-                          avoidCollisions={true}
-                          onPointerDownOutside={(e) => e.preventDefault()}
-                          className="px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100]"
+                      <div className="relative">
+                        <button
+                          type="button"
+                          data-skill-icon
+                          className={`cursor-pointer focus:outline-none rounded transition-transform duration-200 ${isOpen ? "scale-125" : "hover:scale-110"
+                            }`}
+                          aria-label={skill.name}
+                          onTouchEnd={(e) => handleTouch(e, tooltipId)}
+                          onMouseEnter={() => handleMouseEnter(tooltipId)}
+                          onMouseLeave={handleMouseLeave}
                         >
-                          {skill.name}
-                        </TooltipContent>
-                      </Tooltip>
+                          <img
+                            src={skill.logoUrl}
+                            alt={skill.name}
+                            className="w-6 h-8 flex-shrink-0 object-contain pointer-events-none"
+                          />
+                        </button>
+
+                        {isOpen && (
+                          <div
+                            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100] whitespace-nowrap animate-fade-in"
+                          >
+                            {skill.name}
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-popover" />
+                          </div>
+                        )}
+                      </div>
 
                       <div className="flex-1">
                         <Progress
@@ -163,12 +176,12 @@ const Skills = () => {
                         <span className="efootball-sans-bold text-sm">{skill.percentage}%</span>
                       </div>
                     </div>
-                  ))}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </TooltipProvider>
+                  );
+                })}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
