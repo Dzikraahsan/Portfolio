@@ -1,0 +1,86 @@
+/* ============================
+   1) Explorer: File/folder Name
+   ============================ */
+.monaco-workbench .explorer-viewlet .monaco-tree .label-name,
+.monaco-workbench .explorer-viewlet .monaco-tree .monaco-tl-row .label-name {
+    font-family: "Pretendard" !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+}
+
+/* ============================
+   2) Tab labels (Top Editor)
+   ============================ */
+.part.editor>.title .tabs-container .tab .monaco-tab-label,
+.monaco-workbench .part.editor .tabs-container .tab .label-name {
+    font-family: "Pretendard" !important;
+    font-weight: 500 !important;
+}
+
+/* ============================
+   3) Line numbers (gutter)
+   ============================ */
+.monaco-editor .margin .line-numbers,
+.monaco-editor .margin .line-numbers .line-number,
+.view-overlays .line-numbers,
+.monaco-editor .gutter .line-numbers {
+    font-family: "Pretendard" !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    letter-spacing: 0 !important;
+}
+
+/* ============================
+   4) Only text style
+   ============================ */
+
+/* Menu bar (File, Edit, Selection, View, Help) */
+.menubar,
+.menubar .menubar-menu-button,
+.menubar .menubar-menu-items,
+.menubar .action-label,
+.menubar .action-item .action-label {
+   font-family: "Pretendard" !important;
+   font-weight: 500 !important;
+}
+
+/* ============================
+   Robust selector: Explorer file/folder names
+   (covers different VSCode versions/themes)
+   ============================ */
+
+/* ============================
+   Explorer: robust coverage (names + descriptions + file labels)
+   ============================ */
+
+.monaco-workbench .explorer-viewlet .monaco-list-row .monaco-icon-label .label-name,
+.monaco-workbench .explorer-viewlet .monaco-list-row .label-name,
+.monaco-workbench .explorer-viewlet .monaco-tree .monaco-tl-row .label-name,
+.explorer-folders-view .monaco-tree .monaco-tl-row .label-name,
+.file-icon-label .label-name,
+.tree-row .label-name,
+.monaco-tree .monaco-icon-label .label-name,
+.monaco-list .monaco-list-row .label-name,
+.monaco-list-row .label-name,
+.monaco-workbench .explorer-viewlet .monaco-list .monaco-tl-row .label-name,
+.monaco-workbench .explorer-viewlet .monaco-list .label-description,
+.monaco-workbench .explorer-viewlet .monaco-list-row .label-description,
+.monaco-workbench .explorer-viewlet .monaco-list-row .label-name .name {
+   font-family: "Pretendard" !important;
+   font-weight: 500 !important;
+   font-size: 13px !important;
+   line-height: 1.25 !important;
+   color: inherit !important;
+}
+
+.monaco-workbench .explorer-viewlet [role="treeitem"] .label-name,
+.monaco-workbench .explorer-viewlet [role="treeitem"] .monaco-icon-label .label-name,
+.monaco-workbench .explorer-viewlet [role="treeitem"] .monaco-icon-label .label-description {
+   font-family: "Pretendard" !important;
+}
+
+.monaco-workbench .explorer-viewlet .monaco-icon-label .file-icon,
+.monaco-workbench .explorer-viewlet .file-icon {
+
+}
