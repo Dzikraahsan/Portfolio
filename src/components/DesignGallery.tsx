@@ -91,9 +91,9 @@ const DesignGallery = () => {
 
     return (
         <section id="designs" className="py-16 md:py-24 bg-secondary/30">
-            <div className="container mx-auto px-20">
+            <div className="container mx-auto px-12 md:px-12">
                 {/* Section Header */}
-                <div className="text-center mb-10">
+                <div className="text-center mb-12">
                     <h2 className="text-[25px] md:text-4xl font-bold text-foreground mb-4 formular-bold">
                         MY DESIGNS
                     </h2>
@@ -103,14 +103,14 @@ const DesignGallery = () => {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative max-w-lg mx-auto">
+                <div className="relative max-w-lg mx-auto px-10 md:px-0">
                     {/* Navigation Button - Left */}
                     <button
                         onClick={goToPrevious}
                         disabled={isAnimating}
                         className={cn(
-                            "absolute left-0 md:-left-16 top-1/2 -translate-y-12 md:-translate-y-12 z-10",
-                            "w-10 h-10 md:w-12 md:h-12 rounded-full",
+                            "absolute -left-1 md:-left-16 top-1/2 -translate-y-12 z-10",
+                            "w-8 h-8 md:w-12 md:h-12 rounded-full",
                             "bg-background/90 backdrop-blur-sm border border-border",
                             "flex items-center justify-center",
                             "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
@@ -121,7 +121,7 @@ const DesignGallery = () => {
                         )}
                         aria-label="Desain sebelumnya"
                     >
-                        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+                        <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
                     </button>
 
                     {/* Design Card */}
@@ -177,8 +177,8 @@ const DesignGallery = () => {
                         onClick={goToNext}
                         disabled={isAnimating}
                         className={cn(
-                            "absolute right-0 md:-right-16 top-1/2 -translate-y-12 z-10",
-                            "w-10 h-10 md:w-12 md:h-12 rounded-full",
+                            "absolute -right-1 md:-right-16 top-1/2 -translate-y-12 z-10",
+                            "w-8 h-8 md:w-12 md:h-12 rounded-full",
                             "bg-background/90 backdrop-blur-sm border border-border",
                             "flex items-center justify-center",
                             "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
@@ -189,7 +189,7 @@ const DesignGallery = () => {
                         )}
                         aria-label="Desain selanjutnya"
                     >
-                        <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+                        <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
                     </button>
 
                     {/* Pagination Dots */}
@@ -217,7 +217,7 @@ const DesignGallery = () => {
                     {/* Counter */}
                     <div className="text-center mt-4">
                         <span className="text-sm text-muted-foreground">
-                            <span className="text-[#212327] font-semibold">{currentIndex + 1}</span>
+                            <span className="text-[#4ca1af] font-semibold">{currentIndex + 1}</span>
                             {" / "}
                             {designs.length}
                         </span>
@@ -227,28 +227,28 @@ const DesignGallery = () => {
 
             {/* Custom Animation Styles */}
             <style>{`
-        @keyframes slide-left {
-          0% { transform: translateX(100%); opacity: 0; }
-          100% { transform: translateX(0); opacity: 1; }
-        }
+                @keyframes slide-left {
+                    0% { transform: translateX(100%); opacity: 0; }
+                    100% { transform: translateX(0); opacity: 1; }
+                }
 
-        @keyframes slide-right {
-          0% { transform: translateX(-100%); opacity: 0; }
-          100% { transform: translateX(0); opacity: 1; }
-        }
+                @keyframes slide-right {
+                    0% { transform: translateX(-100%); opacity: 0; }
+                    100% { transform: translateX(0); opacity: 1; }
+                }
 
-        .animate-slide-out-left {
-          animation: slide-left 0.35s ease-out forwards;
-        }
+                .animate-slide-out-left {
+                    animation: slide-left 0.35s ease-out forwards;
+                }
 
-        .animate-slide-out-right {
-          animation: slide-right 0.35s ease-out forwards;
-        }
+                .animate-slide-out-right {
+                    animation: slide-right 0.35s ease-out forwards;
+                }
 
-        .animate-fade-scale-in {
-          animation: none;
-        }
-      `}</style>
+                .animate-fade-scale-in {
+                    animation: none;
+                }
+            `}</style>
         </section>
     );
 };
