@@ -90,10 +90,10 @@ const DesignGallery = () => {
     const currentDesign = designs[currentIndex];
 
     return (
-        <section id="designs" className="py-16 md:py-24 bg-secondary/30">
+        <section id="designs" className="py-16 md:py-24">
             <div className="container mx-auto px-12 md:px-12">
                 {/* Section Header */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-9 md:mb-12">
                     <h2 className="text-[25px] md:text-4xl font-bold text-foreground mb-4 formular-bold">
                         MY DESIGNS
                     </h2>

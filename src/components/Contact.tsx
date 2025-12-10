@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-muted/30">
+    <section id="contact" className="py-20 px-4">
       <div className="container mx-auto">
         <h2 className="text-[25px] font-bold text-center mb-9 md:mb-12 md:text-4xl formular-bold">CONTACT</h2>
 
