@@ -91,15 +91,15 @@ const DesignGallery = () => {
 
     return (
         <section id="designs" className="py-16 md:py-24 bg-secondary/30">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-20">
                 {/* Section Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 formular-bold">
+                <div className="text-center mb-10">
+                    <h2 className="text-[25px] md:text-4xl font-bold text-foreground mb-4 formular-bold">
                         MY DESIGNS
                     </h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
+                    {/* <p className="text-muted-foreground max-w-2xl mx-auto">
                         Koleksi desain yang telah saya buat
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* Carousel Container */}
@@ -109,13 +109,13 @@ const DesignGallery = () => {
                         onClick={goToPrevious}
                         disabled={isAnimating}
                         className={cn(
-                            "absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 z-10",
+                            "absolute left-0 md:-left-16 top-1/2 -translate-y-12 md:-translate-y-12 z-10",
                             "w-10 h-10 md:w-12 md:h-12 rounded-full",
                             "bg-background/90 backdrop-blur-sm border border-border",
                             "flex items-center justify-center",
-                            "text-foreground hover:text-primary hover:border-primary",
+                            "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
                             "transition-all duration-300 ease-out",
-                            "hover:scale-110 hover:shadow-lg hover:shadow-primary/20",
+                            "hover:scale-110 hover:shadow-lg hover:shadow-[#4ca1af]/20",
                             "active:scale-95",
                             "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                         )}
@@ -177,13 +177,13 @@ const DesignGallery = () => {
                         onClick={goToNext}
                         disabled={isAnimating}
                         className={cn(
-                            "absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 z-10",
+                            "absolute right-0 md:-right-16 top-1/2 -translate-y-12 z-10",
                             "w-10 h-10 md:w-12 md:h-12 rounded-full",
                             "bg-background/90 backdrop-blur-sm border border-border",
                             "flex items-center justify-center",
-                            "text-foreground hover:text-primary hover:border-primary",
+                            "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
                             "transition-all duration-300 ease-out",
-                            "hover:scale-110 hover:shadow-lg hover:shadow-primary/20",
+                            "hover:scale-110 hover:shadow-lg hover:shadow-[#4ca1af]/20",
                             "active:scale-95",
                             "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                         )}
@@ -206,7 +206,7 @@ const DesignGallery = () => {
                                 className={cn(
                                     "w-2.5 h-2.5 rounded-full transition-all duration-300",
                                     index === currentIndex
-                                        ? "bg-primary w-8 shadow-md shadow-primary/30"
+                                        ? "bg-[#4ca1af] w-8 shadow-md shadow-[#4ca1af]/30"
                                         : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                                 )}
                                 aria-label={`Lihat desain ${index + 1}`}
@@ -217,7 +217,7 @@ const DesignGallery = () => {
                     {/* Counter */}
                     <div className="text-center mt-4">
                         <span className="text-sm text-muted-foreground">
-                            <span className="text-primary font-semibold">{currentIndex + 1}</span>
+                            <span className="text-[#212327] font-semibold">{currentIndex + 1}</span>
                             {" / "}
                             {designs.length}
                         </span>
@@ -227,53 +227,26 @@ const DesignGallery = () => {
 
             {/* Custom Animation Styles */}
             <style>{`
-        @keyframes slide-out-left {
-          0% {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-          }
-          100% {
-            opacity: 0;
-            transform: translateX(-30px) scale(0.95);
-          }
+        @keyframes slide-left {
+          0% { transform: translateX(100%); opacity: 0; }
+          100% { transform: translateX(0); opacity: 1; }
         }
 
-        @keyframes slide-out-right {
-          0% {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-          }
-          100% {
-            opacity: 0;
-            transform: translateX(30px) scale(0.95);
-          }
-        }
-
-        @keyframes fade-scale-in {
-          0% {
-            opacity: 0;
-            transform: scale(0.95);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
+        @keyframes slide-right {
+          0% { transform: translateX(-100%); opacity: 0; }
+          100% { transform: translateX(0); opacity: 1; }
         }
 
         .animate-slide-out-left {
-          animation: slide-out-left 0.4s ease-out forwards;
+          animation: slide-left 0.35s ease-out forwards;
         }
 
         .animate-slide-out-right {
-          animation: slide-out-right 0.4s ease-out forwards;
+          animation: slide-right 0.35s ease-out forwards;
         }
 
         .animate-fade-scale-in {
-          animation: fade-scale-in 0.4s ease-out forwards;
-        }
-
-        .duration-400 {
-          transition-duration: 400ms;
+          animation: none;
         }
       `}</style>
         </section>
