@@ -5,6 +5,7 @@ import Biodata from "@/components/Biodata";
 import Skills from "@/components/Skills";
 import DesignGallery from "@/components/DesignGallery";
 import Projects from "@/components/Projects";
+import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -69,11 +70,15 @@ const Index = () => {
       </div>
 
       <div data-aos="fade-up">
-        <DesignGallery />
+        <Projects />
       </div>
 
       <div data-aos="fade-up">
-        <Projects />
+        <Certificates />
+      </div>
+
+      <div data-aos="fade-up">
+        <DesignGallery />
       </div>
 
       <div data-aos="fade-up">

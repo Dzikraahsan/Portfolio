@@ -2,26 +2,35 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Data desain - ganti dengan desain Anda
-const designs = [
+// Data sertifikat - ganti dengan sertifikat Anda
+const certificates = [
   {
     id: 1,
+    title: "Certificate Basic HTML and CSS",
     image:
-      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1765354947/arg-fra2_1_bcs7tq.webp",
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767703963/HTML_CSS_dasar_os3i3w.jpg",
   },
   {
     id: 2,
+    title: "Certificate How To Using Database",
     image:
-      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1765354951/arg-cra_2_p8scpk.webp",
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767703963/PENGGUNAAN_DATABASE_xy3xsn.jpg",
   },
   {
     id: 3,
+    title: "Certificate Introducing Database",
     image:
-      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1765354953/arg-ned_2_zjxbbz.webp",
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767703963/PENGENALAN_DATABASE_uvgsnd.jpg",
+  },
+  {
+    id: 4,
+    title: "Certificate Javascript Basic",
+    image:
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767703963/JAVASCRIPT_dasar_yfdtyn.jpg",
   },
 ];
 
-const DesignGallery = () => {
+const Certificates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState<"left" | "right" | null>(null);
@@ -35,14 +44,18 @@ const DesignGallery = () => {
     if (isAnimating) return;
     setDirection("right");
     setIsAnimating(true);
-    setCurrentIndex((prev) => (prev === 0 ? designs.length - 1 : prev - 1));
+    setCurrentIndex((prev) =>
+      prev === 0 ? certificates.length - 1 : prev - 1,
+    );
   }, [isAnimating]);
 
   const goToNext = useCallback(() => {
     if (isAnimating) return;
     setDirection("left");
     setIsAnimating(true);
-    setCurrentIndex((prev) => (prev === designs.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) =>
+      prev === certificates.length - 1 ? 0 : prev + 1,
+    );
   }, [isAnimating]);
 
   // Reset animation state
@@ -90,30 +103,27 @@ const DesignGallery = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [goToPrevious, goToNext]);
 
-  const currentDesign = designs[currentIndex];
+  const currentCertificate = certificates[currentIndex];
 
   return (
-    <section id="designs" className="py-16 md:py-24">
-      <div className="container mx-auto px-10 md:px-12">
+    <section id="certificates" className="py-16 md:py-24">
+      <div className="container mx-auto px-8.5 md:px-4 lg:px-4">
         {/* Section Header */}
         <div className="text-center mb-9 md:mb-12">
-          <h2 className="text-[25px] md:text-4xl font-bold text-foreground mb-4 formular-bold">
-            MY DESIGNS
+          <h2 className="text-[25px] md:text-4xl font-bold text-foreground formular-bold">
+            CERTIFICATES
           </h2>
-          {/* <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Koleksi desain yang telah saya buat
-                    </p> */}
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-lg mx-auto px-10 md:px-0">
+        <div className="relative max-w-3xl mx-auto px-12 md:px-16">
           {/* Navigation Button - Left */}
           <button
             onClick={goToPrevious}
             disabled={isAnimating}
             className={cn(
-              "absolute -left-1 md:-left-16 top-1/2 -translate-y-12 z-10",
-              "w-8 h-8 md:w-12 md:h-12 rounded-full",
+              "absolute left-0 md:-left-4 top-1/2 -translate-y-[4rem] md:-translate-y-[3.5rem] z-10",
+              "w-9 h-9 md:w-12 md:h-12 rounded-full",
               "bg-background/90 backdrop-blur-sm border border-border",
               "flex items-center justify-center",
               "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
@@ -122,56 +132,35 @@ const DesignGallery = () => {
               "active:scale-95",
               "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100",
             )}
-            aria-label="Desain sebelumnya"
+            aria-label="Sertifikat sebelumnya"
           >
             <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
           </button>
 
-          {/* Design Card */}
+          {/* Certificate Card */}
           <div
             ref={containerRef}
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            className="relative overflow-hidden rounded-2xl shadow-2xl"
+            className="relative overflow-hidden rounded-xl shadow-xl"
           >
-            {/* Aspect Ratio Container 4:5 */}
-            <div className="relative aspect-[4/5] bg-card">
+            {/* Aspect Ratio Container 16:9 */}
+            <div className="relative aspect-[3/2] bg-card">
               {/* Image with Animation */}
               <div
                 className={cn(
                   "absolute inset-0",
-                  isAnimating && direction === "left" && "design-slide-left",
-                  isAnimating && direction === "right" && "design-slide-right",
+                  isAnimating && direction === "left" && "cert-slide-left",
+                  isAnimating && direction === "right" && "cert-slide-right",
                 )}
               >
                 <img
-                  src={currentDesign.image}
+                  src={currentCertificate.image}
+                  alt={currentCertificate.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
-
-                {/* Design Info */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3
-                    className={cn(
-                      "text-xl md:text-2xl font-bold mb-2 organetto-500",
-                      "transform transition-all duration-500 delay-100",
-                      isAnimating
-                        ? "opacity-0 translate-y-4"
-                        : "opacity-100 translate-y-0",
-                    )}
-                  ></h3>
-                  <p
-                    className={cn(
-                      "text-sm md:text-base text-white/80",
-                      "transform transition-all duration-500 delay-200",
-                      isAnimating
-                        ? "opacity-0 translate-y-4"
-                        : "opacity-100 translate-y-0",
-                    )}
-                  ></p>
-                </div>
               </div>
             </div>
           </div>
@@ -181,8 +170,8 @@ const DesignGallery = () => {
             onClick={goToNext}
             disabled={isAnimating}
             className={cn(
-              "absolute -right-1 md:-right-16 top-1/2 -translate-y-12 z-10",
-              "w-8 h-8 md:w-12 md:h-12 rounded-full",
+              "absolute right-0 md:-right-4 top-1/2 -translate-y-[4rem] md:-translate-y-[3.5rem] z-10",
+              "w-9 h-9 md:w-12 md:h-12 rounded-full",
               "bg-background/90 backdrop-blur-sm border border-border",
               "flex items-center justify-center",
               "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
@@ -191,14 +180,14 @@ const DesignGallery = () => {
               "active:scale-95",
               "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100",
             )}
-            aria-label="Desain selanjutnya"
+            aria-label="Sertifikat selanjutnya"
           >
             <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
           </button>
 
           {/* Pagination Dots */}
           <div className="flex justify-center gap-2 mt-6">
-            {designs.map((_, index) => (
+            {certificates.map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
@@ -213,7 +202,7 @@ const DesignGallery = () => {
                     ? "bg-[#4ca1af] w-8 shadow-md shadow-[#4ca1af]/30"
                     : "bg-muted-foreground/30 hover:bg-muted-foreground/50",
                 )}
-                aria-label={`Lihat desain ${index + 1}`}
+                aria-label={`Lihat sertifikat ${index + 1}`}
               />
             ))}
           </div>
@@ -225,7 +214,7 @@ const DesignGallery = () => {
                 {currentIndex + 1}
               </span>
               {" / "}
-              {designs.length}
+              {certificates.length}
             </span>
           </div>
         </div>
@@ -233,26 +222,26 @@ const DesignGallery = () => {
 
       {/* Simple Slide Animation */}
       <style>{`
-                @keyframes design-slide-in-left {
+                @keyframes cert-slide-in-left {
                     from { transform: translateX(100%); opacity: 0; }
                     to { transform: translateX(0); opacity: 1; }
                 }
 
-                @keyframes design-slide-in-right {
+                @keyframes cert-slide-in-right {
                     from { transform: translateX(-100%); opacity: 0; }
                     to { transform: translateX(0); opacity: 1; }
                 }
 
-                .design-slide-left {
-                    animation: design-slide-in-left 0.35s ease-out forwards;
+                .cert-slide-left {
+                    animation: cert-slide-in-left 0.35s ease-out forwards;
                 }
 
-                .design-slide-right {
-                    animation: design-slide-in-right 0.35s ease-out forwards;
+                .cert-slide-right {
+                    animation: cert-slide-in-right 0.35s ease-out forwards;
                 }
             `}</style>
     </section>
   );
 };
 
-export default DesignGallery;
+export default Certificates;

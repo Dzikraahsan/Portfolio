@@ -45,14 +45,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`zoom-in fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-[5px]" : "bg-transparent"
-        }`}
+      className={`zoom-in fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/80 backdrop-blur-[5px]" : "bg-transparent"
+      }`}
     >
       <div className="container mx-auto px-12 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="https://res.cloudinary.com/da4fjxm1e/image/upload/f_auto,q_auto,w_500/pp2_zviwy5.png"
+              src="https://res.cloudinary.com/da4fjxm1e/image/upload/f_auto,q_auto,w_500/foto-dzikra_hczrpj.png"
               alt="Foto"
               className="rounded-full h-7 w-7 flex-shrink-0 object-cover"
               loading="lazy"
@@ -61,7 +62,8 @@ const Navbar = () => {
 
             <a
               href="#home"
-              className="text-xl md:text-2xl lg:text-2xl formular-bold text-[#4ca1af] whitespace-nowrap hover:no-underline">
+              className="text-xl md:text-2xl lg:text-2xl formular-bold text-[#4ca1af] whitespace-nowrap hover:no-underline"
+            >
               DZII27
             </a>
           </div>
@@ -92,11 +94,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className={`absolute left-0 mt-4 pb-4 bg-[#4ca1af] rounded-r-lg p-3 w-fit text-left transition-all duration-300 ${
-            isClosing
-              ? "animate-out slide-out-to-left-10 fade-out"
-              : "animate-in slide-in-from-left-10 fade-in"
-          }`}>
+          <div
+            className={`absolute left-0 mt-4 pb-4 bg-[#4ca1af] rounded-r-lg p-3 w-fit text-left transition-all duration-300 ${
+              isClosing
+                ? "animate-out slide-out-to-left-10 fade-out"
+                : "animate-in slide-in-from-left-10 fade-in"
+            }`}
+          >
             <div className="flex flex-col items-start space-y-1">
               {navLinks.map((link) => (
                 <a
