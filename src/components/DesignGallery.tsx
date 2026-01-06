@@ -101,8 +101,8 @@ const DesignGallery = () => {
             MY DESIGNS
           </h2>
           {/* <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Koleksi desain yang telah saya buat
-                    </p> */}
+              Koleksi desain yang telah saya buat
+          </p> */}
         </div>
 
         {/* Carousel Container */}
@@ -149,6 +149,7 @@ const DesignGallery = () => {
                   src={currentDesign.image}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Design Info */}
