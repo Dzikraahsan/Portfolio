@@ -51,11 +51,7 @@ const Footer = () => {
         setOpenTooltip(tooltipId);
       }
     },
-<<<<<<< HEAD
     [isTouch],
-=======
-    [isTouch]
->>>>>>> 2959b537996158c1212c5f36137d9ff7c83eca37
   );
 
   const handleMouseLeave = useCallback(() => {
@@ -82,7 +78,6 @@ const Footer = () => {
                 <div key={social.name} className="relative">
                   <a
                     href={social.href}
-<<<<<<< HEAD
                     target={
                       social.href.startsWith("mailto:") ? undefined : "_blank"
                     }
@@ -94,13 +89,6 @@ const Footer = () => {
                     data-social-icon
                     className={`flex items-center justify-center w-10 h-10 rounded-md bg-transparent text-[#eaebed] hover:bg-[#4ca1af] transition-transform duration-200 ${
                       isOpen ? "scale-110" : "hover:scale-110"
-=======
-                    target={social.href.startsWith("mailto:") ? undefined : "_blank"}
-                    rel={social.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                    data-social-icon
-                    className={`flex items-center justify-center w-10 h-10 rounded-md bg-transparent text-[#eaebed] hover:bg-[#4ca1af] transition-transform duration-200 ${
-                      isOpen ? "scale-125" : "hover:scale-110"
->>>>>>> 2959b537996158c1212c5f36137d9ff7c83eca37
                     }`}
                     aria-label={social.name}
                     onTouchEnd={(e) => handleTouch(e, social.name)}
