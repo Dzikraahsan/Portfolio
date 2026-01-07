@@ -169,17 +169,17 @@ const Skills = () => {
       skills: [
         {
           name: "GitHub",
-          logoUrl: "https://cdn.simpleicons.org/github/181717",
+          logoUrl: "https://cdn.simpleicons.org/github/FFFFFF",
           percentage: 88,
         },
         {
           name: "Vercel",
-          logoUrl: "https://cdn.simpleicons.org/vercel/000000",
+          logoUrl: "https://cdn.simpleicons.org/vercel/FFFFFF",
           percentage: 85,
         },
         {
           name: "Railway",
-          logoUrl: "https://cdn.simpleicons.org/railway/0B0D0E",
+          logoUrl: "https://cdn.simpleicons.org/railway/FFFFFF",
           percentage: 80,
         },
         {
