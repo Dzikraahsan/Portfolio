@@ -244,12 +244,12 @@ const Skills = () => {
               key={category.title}
               className="overflow-hidden bg-transparent"
             >
-              <CardHeader className="pb-4">
+              <CardHeader className="mt-[1.10rem]">
                 <CardTitle className="text-center text-xl text-[#eaebed]">
                   {category.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-5 p-8 text-[#eaebed] ">
+              <CardContent className="space-y-5 pb-11 pl-10 pr-10  text-[#eaebed] ">
                 {category.skills.map((skill) => {
                   const tooltipId = `${category.title}-${skill.name}`;
                   const isOpen = openTooltip === tooltipId;
@@ -271,7 +271,7 @@ const Skills = () => {
                           <img
                             src={skill.logoUrl}
                             alt={skill.name}
-                            className="w-8 h-7 -translate-y-[-3px] flex-shrink-0 object-contain pointer-events-none"
+                            className="w-8 h-7 -translate-y-[-3.5px] flex-shrink-0 object-contain pointer-events-none"
                           />
                         </button>
 
@@ -288,11 +288,11 @@ const Skills = () => {
                       <div className="flex-1">
                         <Progress
                           value={skill.percentage}
-                          className="h-4 rounded-md [&>div]:bg-[#4ca1af] [&>div]:rounded-none"
+                          className="h-4 rounded-md [&>div]:bg-[#4ca1af] top-[1.5px] [&>div]:rounded-none"
                         />
                       </div>
 
-                      <div className="w-9 text-right">
+                      <div className="w-8 text-right">
                         <span className="efootball-sans-bold text-sm">
                           {skill.percentage}%
                         </span>
