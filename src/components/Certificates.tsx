@@ -109,8 +109,8 @@ const Certificates = () => {
     <section id="certificates" className="py-16 md:py-24">
       <div className="container mx-auto px-8.5 md:px-4 lg:px-4">
         {/* Section Header */}
-        <div className="text-center mb-9 md:mb-12">
-          <h2 className="text-[25px] md:text-4xl font-bold text-foreground formular-bold">
+        <div className="text-center mb-7 md:mb-10">
+          <h2 className="text-[25px] text-[#eaebed] md:text-4xl font-bold formular-bold">
             CERTIFICATES
           </h2>
         </div>
@@ -126,7 +126,7 @@ const Certificates = () => {
               "w-9 h-9 md:w-12 md:h-12 rounded-full",
               "bg-background/90 backdrop-blur-sm border border-border",
               "flex items-center justify-center",
-              "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
+              "text-[#eaebed] hover:text-[#4ca1af] hover:border-[#4ca1af]",
               "transition-all duration-300 ease-out",
               "hover:scale-110 hover:shadow-lg hover:shadow-[#4ca1af]/20",
               "active:scale-95",
@@ -143,7 +143,7 @@ const Certificates = () => {
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            className="relative overflow-hidden rounded-xl shadow-xl"
+            className="relative md:max-w-[35rem] mx-auto overflow-hidden rounded-xl shadow-xl"
           >
             {/* Aspect Ratio Container 16:9 */}
             <div className="relative aspect-[3/2] bg-card">
@@ -174,7 +174,7 @@ const Certificates = () => {
               "w-9 h-9 md:w-12 md:h-12 rounded-full",
               "bg-background/90 backdrop-blur-sm border border-border",
               "flex items-center justify-center",
-              "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
+              "text-[#eaebed] hover:text-[#4ca1af] hover:border-[#4ca1af]",
               "transition-all duration-300 ease-out",
               "hover:scale-110 hover:shadow-lg hover:shadow-[#4ca1af]/20",
               "active:scale-95",
@@ -209,7 +209,7 @@ const Certificates = () => {
 
           {/* Counter */}
           <div className="text-center mt-4">
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-[#eaebed]/80">
               <span className="text-[#4ca1af] font-semibold">
                 {currentIndex + 1}
               </span>

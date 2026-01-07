@@ -7,17 +7,42 @@ const designs = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1765354947/arg-fra2_1_bcs7tq.webp",
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768361/norway_pfse5a.webp",
   },
   {
     id: 2,
     image:
-      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1765354951/arg-cra_2_p8scpk.webp",
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768361/man-city_mvghkd.webp",
   },
   {
     id: 3,
     image:
-      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1765354953/arg-ned_2_zjxbbz.webp",
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768687/city-madrid_dajqj8.webp",
+  },
+  {
+    id: 4,
+    image:
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768361/mancity_stats_bpnvkc.webp",
+  },
+  {
+    id: 5,
+    image:
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768361/indonesia_dtmavg.webp",
+  },
+  {
+    id: 6,
+    image:
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768896/design_t-shirt_dzikra_hgqhkp.webp",
+  },
+  {
+    id: 7,
+    image:
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768896/design_poster_dzikra_rytjop.webp",
+  },
+  {
+    id: 8,
+    image:
+      "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767768896/design_marketplace_dzikra_hhvccv.webp",
   },
 ];
 
@@ -96,9 +121,9 @@ const DesignGallery = () => {
     <section id="designs" className="py-16 md:py-24">
       <div className="container mx-auto px-10 md:px-12">
         {/* Section Header */}
-        <div className="text-center mb-9 md:mb-12">
-          <h2 className="text-[25px] md:text-4xl font-bold text-foreground mb-4 formular-bold">
-            MY DESIGNS
+        <div className="text-center mb-7 md:mb-10">
+          <h2 className="text-[25px] text-[#eaebed] md:text-4xl font-bold mb-4 formular-bold">
+            DESIGNS
           </h2>
           {/* <p className="text-muted-foreground max-w-2xl mx-auto">
               Koleksi desain yang telah saya buat
@@ -106,7 +131,7 @@ const DesignGallery = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-lg mx-auto px-10 md:px-0">
+        <div className="relative md:max-w-[25rem] mx-auto px-10 md:px-0">
           {/* Navigation Button - Left */}
           <button
             onClick={goToPrevious}
@@ -116,7 +141,7 @@ const DesignGallery = () => {
               "w-8 h-8 md:w-12 md:h-12 rounded-full",
               "bg-background/90 backdrop-blur-sm border border-border",
               "flex items-center justify-center",
-              "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
+              "text-[#eaebed] hover:text-[#4ca1af] hover:border-[#4ca1af]",
               "transition-all duration-300 ease-out",
               "hover:scale-110 hover:shadow-lg hover:shadow-[#4ca1af]/20",
               "active:scale-95",
@@ -186,7 +211,7 @@ const DesignGallery = () => {
               "w-8 h-8 md:w-12 md:h-12 rounded-full",
               "bg-background/90 backdrop-blur-sm border border-border",
               "flex items-center justify-center",
-              "text-foreground hover:text-[#4ca1af] hover:border-[#4ca1af]",
+              "text-[#eaebed] hover:text-[#4ca1af] hover:border-[#4ca1af]",
               "transition-all duration-300 ease-out",
               "hover:scale-110 hover:shadow-lg hover:shadow-[#4ca1af]/20",
               "active:scale-95",
@@ -221,7 +246,7 @@ const DesignGallery = () => {
 
           {/* Counter */}
           <div className="text-center mt-4">
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-[#eaebed]/80">
               <span className="text-[#4ca1af] font-semibold">
                 {currentIndex + 1}
               </span>

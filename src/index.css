@@ -7,307 +7,305 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 220 13% 13%;
+    :root {
+        --background: 220, 8%, 14%;
+        --foreground: 220 13% 13%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 13% 13%;
+        --card: 0 0% 100%;
+        --card-foreground: 220 13% 13%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 13%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 220 13% 13%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 262 83% 68%;
+        --primary: 262 83% 58%;
+        --primary-foreground: 0 0% 100%;
+        --primary-glow: 262 83% 68%;
 
-    --secondary: 220 13% 95%;
-    --secondary-foreground: 220 13% 13%;
+        --secondary: 220 13% 95%;
+        --secondary-foreground: 220 13% 13%;
 
-    --muted: 220 13% 95%;
-    --muted-foreground: 220 9% 46%;
+        --muted: 220 13% 95%;
+        --muted-foreground: 220 9% 46%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+        --accent: 262 83% 58%;
+        --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 262 83% 58%;
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 262 83% 58%;
 
-    --radius: 0.75rem;
+        --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
 
-  .dark {
-    --background: 220 13% 9%;
-    --foreground: 0 0% 98%;
+    .dark {
+        --background: 220 13% 9%;
+        --foreground: 0 0% 98%;
 
-    --card: 220 13% 12%;
-    --card-foreground: 0 0% 98%;
+        --card: 220 13% 12%;
+        --card-foreground: 0 0% 98%;
 
-    --popover: 220 13% 12%;
-    --popover-foreground: 0 0% 98%;
+        --popover: 220 13% 12%;
+        --popover-foreground: 0 0% 98%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 262 83% 68%;
+        --primary: 262 83% 58%;
+        --primary-foreground: 0 0% 100%;
+        --primary-glow: 262 83% 68%;
 
-    --secondary: 220 13% 15%;
-    --secondary-foreground: 0 0% 98%;
+        --secondary: 220 13% 15%;
+        --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 13% 15%;
-    --muted-foreground: 220 9% 65%;
+        --muted: 220 13% 15%;
+        --muted-foreground: 220 9% 65%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+        --accent: 262 83% 58%;
+        --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 20%;
-    --input: 220 13% 20%;
-    --ring: 262 83% 58%;
+        --border: 220 13% 20%;
+        --input: 220 13% 20%;
+        --ring: 262 83% 58%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
 }
 
 /* ===Pretendard=== */
 
 @font-face {
-  font-family: 'Pretendard';
-  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Pretendard";
+    src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Pretendard';
-  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Pretendard";
+    src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* === Organetto === */
 
 @font-face {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Regular.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Regular.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* === eFootball Sans === */
 
 @font-face {
-  font-family: 'eFootballSans-Regular';
-  src: url('/fonts/eFootballSans-Regular.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "eFootballSans-Regular";
+    src: url("/fonts/eFootballSans-Regular.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 @font-face {
-  font-family: 'eFootballSans-Bold';
-  src: url('/fonts/eFootballSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "eFootballSans-Bold";
+    src: url("/fonts/eFootballSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* === Formular === */
 
 @font-face {
-  font-family: 'formular-bold';
-  src: url('/fonts/formular-bold.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "formular-bold";
+    src: url("/fonts/formular-bold.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* Class Organetto Font */
 
 .organetto-100 {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Light.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
 }
 
 .organetto-200 {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Light.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
 }
 
 .organetto-300 {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 .organetto-400 {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Light.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 .organetto-500 {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Light.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 .organetto-600 {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Light.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Light.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 .organetto-700 {
-  font-family: 'Organetto';
-  src: url('/fonts/Organetto-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Organetto";
+    src: url("/fonts/Organetto-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* Class Formular Font */
 
 .formular-bold {
-  font-family: 'formular-bold';
-  src: url('/fonts/formular-bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: "formular-bold";
+    src: url("/fonts/formular-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* Class eFootball Sans */
 
 .efootball-sans-regular {
-  font-family: 'eFootballSans-Regular';
-  src: url('/fonts/eFootballSans-Regular.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "eFootballSans-Regular";
+    src: url("/fonts/eFootballSans-Regular.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 .efootball-sans-bold {
-  font-family: 'eFootballSans-Bold';
-  src: url('/fonts/eFootballSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "eFootballSans-Bold";
+    src: url("/fonts/eFootballSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* ====== ANIMASI ZOOM-IN (Navbar.tsx) ====== */
 
 @keyframes zoom-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
 
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .zoom-in {
-  animation: zoom-in 0.85s ease-in-out forwards;
-  will-change: transform, opacity;
-  backface-visibility: hidden;
+    animation: zoom-in 0.85s ease-in-out forwards;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 /* ====== ANIMASI FADE-UP ====== */
 
 @keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fade-up {
-  animation: fade-up 0.9s ease-out forwards;
-  will-change: transform, opacity;
-  backface-visibility: hidden;
+    animation: fade-up 0.9s ease-out forwards;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 /* ====== ALIGNMENT TEXT ====== */
 
 .justify {
-  text-align: justify;
-  text-align-last: center;
+    text-align: justify;
+    text-align-last: center;
 }
 
-.justify2{
-  text-align: justify;
-  text-align-last: left;
+.justify2 {
+    text-align: justify;
+    text-align-last: left;
 }
 
 @layer base {
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'eFootballSans-Regular', sans-serif !important;
-  }
+    body {
+        @apply bg-background text-foreground;
+        font-family: "eFootballSans-Regular", sans-serif !important;
+    }
 
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
 }
-
-

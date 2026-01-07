@@ -5,20 +5,20 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-4 pt-0 md:pt-12"
+      className="min-h-screen flex items-center justify-center px-4 pt-10 md:pt-12"
     >
       <div className="container mx-auto text-center">
         <div className="mb-8 animate-fade-in">
-          <h1 className="text-[21px] md:text-[48px] font-bold mb-2">
+          <h1 className="text-[21px] md:text-[48px] text-[#eaebed] font-bold mb-2">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r text-[#4ca1af] formular-bold">
               DZIKRA AHSAN IMAWAN
             </span>
           </h1>
-          <p className="text-[16px] md:text-2xl font-normal text-[#2c3e50] mb-2">
+          <p className="text-[16px] md:text-2xl font-normal text-[#eaebed] mb-2">
             Front-End Developer
           </p>
-          <p className="text-[12.75px] md:text-[16px] text-muted-foreground max-w-[20rem] md:max-w-[45rem] mx-auto">
+          <p className="text-[12.75px] md:text-[16px] text-[#eaebed]/80 max-w-[20rem] md:max-w-[45rem] mx-auto">
             I am interested in front-heavy fullstack developer and continue to
             hone my programming skills.
           </p>
@@ -28,20 +28,20 @@ const Hero = () => {
           <Button
             variant="outline"
             asChild
-            className="bg-[#4ca1af] text-[11px] h-8 md:text-base md:h-full hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af] !important"
+            className="bg-transparent text-[11px] h-8 md:text-base md:h-full hover:bg-[#4ca1af] text-[#eaebed] border-[#eaebed] hover:border-[#4ca1af] !important"
           >
             <a href="#projects">See Project</a>
           </Button>
           <Button
             variant="outline"
-            className="bg-[#eaebed] text-[11px] h-8 md:text-base md:h-full hover:bg-[#2c3e50] text-[#212327] hover:text-white border-[#426370] hover:border-[#4ca1af]"
+            className="bg-transparent text-[11px] h-8 md:text-base md:h-full hover:bg-[#4ca1af] text-[#eaebed] hover:text-white border-[#eaebed] hover:border-[#4ca1af]"
             asChild
           >
             <a href="#contact">Contact</a>
           </Button>
           <Button
             variant="outline"
-            className="bg-[#426370] text-[11px] h-8 md:text-base md:h-full hover:bg-[#2c3e50] text-[#eaebed] hover:text-white border-[#426370] hover:border-[#4ca1af]"
+            className="bg-transparent text-[11px] h-8 md:text-base md:h-full hover:bg-[#4ca1af] text-[#eaebed] hover:text-white border-[#eaebed] hover:border-[#4ca1af]"
             asChild
           >
             <a href="https://github.com/Dzikraahsan">

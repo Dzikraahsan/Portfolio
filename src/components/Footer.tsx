@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="py-8 px-4 border-t">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">
+          <p className="text-[#eaebed]/90 text-sm">
             &copy; {currentYear} Dzikra Ahsan Imawan. All Rights Reserved.
           </p>
 
@@ -27,7 +27,7 @@ const Footer = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="bg-transparent hover:bg-[#4ca1af]"
+              className="bg-transparent text-[#eaebed] hover:bg-[#4ca1af]"
               asChild
             >
               <a
@@ -41,7 +41,7 @@ const Footer = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="bg-transparent hover:bg-[#4ca1af]"
+              className="bg-transparent text-[#eaebed] hover:bg-[#4ca1af]"
               asChild
             >
               <a
@@ -55,7 +55,7 @@ const Footer = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="bg-transparent hover:bg-[#4ca1af]"
+              className="bg-transparent text-[#eaebed] hover:bg-[#4ca1af]"
               asChild
             >
               <a href="mailto:dzikraahsan10@gmail.com">

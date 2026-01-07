@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 md:py-24 px-4">
       <div className="container mx-auto">
-        <h2 className="text-[25px] font-bold text-center mb-9 md:mb-12 md:text-4xl formular-bold">
+        <h2 className="text-[25px] font-bold text-center text-[#eaebed] mb-7 md:mb-10 md:text-4xl formular-bold">
           CONTACT
         </h2>
 
@@ -39,12 +39,12 @@ const Contact = () => {
           className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
           data-aos="fade-up"
         >
-          <Card>
+          <Card className="bg-transparent">
             <CardHeader>
-              <CardTitle className="text-[20px] md:text-2xl">
+              <CardTitle className="text-[20px] md:text-2xl text-[#eaebed]">
                 Send Message
               </CardTitle>
-              <CardDescription className="text-[13px] sm:text-[15px]">
+              <CardDescription className="text-[13px] sm:text-[15px] text-[#eaebed]/80">
                 Fill out the form below and I'll get back to you soon!
               </CardDescription>
             </CardHeader>
@@ -65,6 +65,7 @@ const Contact = () => {
                     transition-colors
                     duration-200
                     placeholder:text-[13px]
+                    placeholder:text-[#eaebed]/75
                     placeholder:translate-y-[-1.5px] "
                 />
                 <div>
@@ -84,6 +85,7 @@ const Contact = () => {
                       transition-colors
                       duration-200
                       placeholder:text-[13px]
+                      placeholder:text-[#eaebed]/75
                       placeholder:translate-y-[-1.5px] "
                   />
                 </div>
@@ -104,14 +106,15 @@ const Contact = () => {
                       !ring-offset-0
                       transition-colors
                       duration-200
-                      placeholder:text-[13px]"
+                      placeholder:text-[13px]
+                      placeholder:text-[#eaebed]/75"
                   />
                 </div>
 
                 <Button
                   variant="outline"
                   type="submit"
-                  className="flex-1 w-full bg-[#4ca1af] hover:bg-[#2c3e50] text-white border-[#426370] hover:border-[#4ca1af]"
+                  className="flex-1 w-full bg-transparent hover:bg-[#2c3e50] text-white border-white hover:border-[#4ca1af]"
                 >
                   Send Message
                 </Button>
@@ -120,13 +123,13 @@ const Contact = () => {
           </Card>
 
           <div className="space-y-12 mt-3 fade-up">
-            <Card>
+            <Card className="bg-transparent">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-[#4ca1af] hover:text-[#2c3e50] mt-1" />
+                  <Mail className="h-6 w-6 hover:text-[#4ca1af] text-[#eaebed] transition-color duration-200 mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground text-[13.5px] sm:text-[16px]">
+                    <h3 className="font-semibold mb-1 text-[#eaebed]">Email</h3>
+                    <p className="text-[#eaebed]/80 text-[13.5px] sm:text-[16px]">
                       dzikraahsan10@gmail.com
                     </p>
                   </div>
@@ -134,13 +137,13 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-transparent">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-[#4ca1af] hover:text-[#2c3e50] mt-1" />
+                  <Phone className="h-6 w-6 hover:text-[#4ca1af] text-[#eaebed] transition-color duration-200 mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground text-[13.5px] sm:text-[16px]">
+                    <h3 className="font-semibold mb-1 text-[#eaebed]">Phone</h3>
+                    <p className="text-[#eaebed]/80 text-[13.5px] sm:text-[16px]">
                       +62 831 3531 9058
                     </p>
                   </div>
@@ -148,13 +151,15 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-transparent">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-[#4ca1af] hover:text-[#2c3e50] mt-1" />
+                  <MapPin className="h-6 w-6 hover:text-[#4ca1af] text-[#eaebed] transition-color duration-200 mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-muted-foreground text-[13.5px] sm:text-[16px]">
+                    <h3 className="font-semibold mb-1 text-[#eaebed]">
+                      Location
+                    </h3>
+                    <p className="text-[#eaebed]/80 text-[13.5px] sm:text-[16px]">
                       Majalengka, Jawa Barat
                     </p>
                   </div>

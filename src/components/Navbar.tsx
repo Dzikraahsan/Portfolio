@@ -74,7 +74,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-foreground/80 hover:text-[#426370] transition-colors"
+                className="text-[#eaebed]/80 hover:text-[#f5f5f5] transition-colors"
               >
                 {link.label}
               </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={handleLinkClick}
-                  className="text-white font-semibold hover:bg-[#3b8894] px-3 py-2 pl-2 rounded-md w-fit transition-colors"
+                  className="text-[#eaebed] font-semibold hover:bg-[#3b8894] px-3 py-2 pl-2 rounded-md w-fit transition-colors"
                 >
                   {link.label}
                 </a>
