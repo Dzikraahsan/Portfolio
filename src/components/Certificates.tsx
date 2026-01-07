@@ -143,7 +143,7 @@ const Certificates = () => {
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            className="relative md:max-w-[35rem] mx-auto overflow-hidden rounded-xl shadow-xl"
+            className="relative md:max-w-[35rem] mx-auto overflow-hidden rounded-md shadow-xl"
           >
             {/* Aspect Ratio Container 16:9 */}
             <div className="relative aspect-[3/2] bg-card">

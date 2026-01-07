@@ -114,7 +114,7 @@ const Contact = () => {
                 <Button
                   variant="outline"
                   type="submit"
-                  className="flex-1 w-full bg-transparent hover:bg-[#2c3e50] text-white border-white hover:border-[#4ca1af]"
+                  className="flex-1 w-full bg-transparent hover:bg-[#4ca1af] text-white border-white hover:border-[#4ca1af]"
                 >
                   Send Message
                 </Button>

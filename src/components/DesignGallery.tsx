@@ -158,7 +158,7 @@ const DesignGallery = () => {
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            className="relative overflow-hidden rounded-2xl shadow-2xl"
+            className="relative overflow-hidden rounded-md shadow-2xl"
           >
             {/* Aspect Ratio Container 4:5 */}
             <div className="relative aspect-[4/5] bg-card">

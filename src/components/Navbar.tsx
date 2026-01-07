@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="https://res.cloudinary.com/da4fjxm1e/image/upload/f_auto,q_auto,w_500/foto-dzikra_hczrpj.png"
+              src="https://res.cloudinary.com/da4fjxm1e/image/upload//pp2_zviwy5.png"
               alt="Foto"
               className="rounded-full h-7 w-7 flex-shrink-0 object-cover"
               loading="lazy"
@@ -85,7 +85,7 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden bg-transparent hover:bg-[#4ca1af]"
+            className="md:hidden bg-transparent text-[#eaebed] hover:bg-[#4ca1af]"
             onClick={handleMobileMenuToggle}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}

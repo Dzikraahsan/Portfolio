@@ -81,8 +81,10 @@ const Projects = () => {
               className="flex flex-col relative bg-transparent text-[#eaebed]"
             >
               {project.isRealProject && (
-                <Badge className="absolute rounded-sm top-7 text-[#eaebed] border-[#eaebed] right-6 bg-transparent hover:bg-[#4ca1af]">
-                  Real Project
+                <Badge className="absolute rounded-sm top-[1.875rem] text-[#eaebed] border-[#eaebed] right-6 bg-transparent hover:bg-[#4ca1af]">
+                  <p className="font-semibold translate-y-[-1px]">
+                    Real Project
+                  </p>
                 </Badge>
               )}
               <CardHeader>
@@ -99,9 +101,9 @@ const Projects = () => {
                     <Badge
                       key={tech}
                       variant="outline"
-                      className="hover:bg-[#2c3e50] text-[#eaebed] hover:text-[#eaebed]"
+                      className="hover:bg-[#4ca1af]  text-[#eaebed] hover:text-[#eaebed]"
                     >
-                      {tech}
+                      <p className="-translate-y-[1px]">{tech}</p>
                     </Badge>
                   ))}
                 </div>
@@ -125,7 +127,7 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     asChild
-                    className="flex-1 bg-[#eaebed] hover:bg-[#4ca1af] text-[#212327] hover:text-white border-[#426370] hover:border-[#4ca1af]"
+                    className="flex-1 bg-[#eaebed] hover:bg-[#4ca1af] text-[#212327] hover:text-white border-[#212327] hover:border-[#4ca1af]"
                   >
                     <a
                       href={project.demo}

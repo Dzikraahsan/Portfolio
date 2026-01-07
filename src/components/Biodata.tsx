@@ -34,14 +34,14 @@ const Biodata = () => {
                     <div className="font-semibold text-[#eaebed]/80 formular-bold text-[16px] md:text-base">
                       {item.label}
                     </div>
-                    <div className="md:col-span-2 text-[#eaebed]/80 text-[13px] md:text-base">
+                    <div className="md:col-span-2 text-[#eaebed]/80 text-[12px] md:text-base">
                       {item.value}
                     </div>
                   </div>
                 ))}
 
                 <div className="mt-8 pt-4 border-t border-border/40">
-                  <p className="text-[12.5px] md:text-base italic text-[#eaebed]/80 text-center">
+                  <p className="text-[12px] md:text-base italic text-[#eaebed]/80 text-center">
                     "Don’t aim to be perfect. Aim to be better than yesterday."
                   </p>
                   <p className="text-xs md:text-sm text-[#eaebed]/70 text-center mt-2">

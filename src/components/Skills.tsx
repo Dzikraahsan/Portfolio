@@ -169,17 +169,17 @@ const Skills = () => {
       skills: [
         {
           name: "GitHub",
-          logoUrl: "https://cdn.simpleicons.org/github/181717",
+          logoUrl: "https://cdn.simpleicons.org/github/FFFFFF",
           percentage: 88,
         },
         {
           name: "Vercel",
-          logoUrl: "https://cdn.simpleicons.org/vercel/000000",
+          logoUrl: "https://cdn.simpleicons.org/vercel/FFFFFF",
           percentage: 85,
         },
         {
           name: "Railway",
-          logoUrl: "https://cdn.simpleicons.org/railway/0B0D0E",
+          logoUrl: "https://cdn.simpleicons.org/railway/FFFFFF",
           percentage: 80,
         },
         {
@@ -221,7 +221,7 @@ const Skills = () => {
         {
           name: "eFootball",
           logoUrl:
-            "https://res.cloudinary.com/da4fjxm1e/image/upload/v1762339157/efootball-logo_jrnfza.png",
+            "https://res.cloudinary.com/da4fjxm1e/image/upload/v1767783838/efootball-logo-white_qje5vp.png",
           percentage: 99,
         },
       ],
@@ -249,13 +249,13 @@ const Skills = () => {
                   {category.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-5 text-[#eaebed] ">
+              <CardContent className="space-y-5 p-8 text-[#eaebed] ">
                 {category.skills.map((skill) => {
                   const tooltipId = `${category.title}-${skill.name}`;
                   const isOpen = openTooltip === tooltipId;
 
                   return (
-                    <div key={skill.name} className="flex items-center gap-3">
+                    <div key={skill.name} className="flex items-center gap-4">
                       <div className="relative">
                         <button
                           type="button"
@@ -271,13 +271,15 @@ const Skills = () => {
                           <img
                             src={skill.logoUrl}
                             alt={skill.name}
-                            className="w-8 h-7 flex-shrink-0 object-contain pointer-events-none"
+                            className="w-8 h-7 -translate-y-[-3px] flex-shrink-0 object-contain pointer-events-none"
                           />
                         </button>
 
                         {isOpen && (
                           <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100] whitespace-nowrap animate-fade-in">
-                            {skill.name}
+                            <p className="-translate-y-[1px] md:-translate-y-[0.75px]">
+                              {skill.name}
+                            </p>
                             <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-popover" />
                           </div>
                         )}
