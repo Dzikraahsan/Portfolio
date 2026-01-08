@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-4 pt-10 md:pt-12"
+      className="min-h-screen flex items-center justify-center px-4 pt-5 md:pt-12"
     >
       <div className="container mx-auto text-center">
         <div className="mb-8 animate-fade-in">

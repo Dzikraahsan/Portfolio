@@ -288,7 +288,7 @@ const Skills = () => {
                       <div className="flex-1">
                         <Progress
                           value={skill.percentage}
-                          className="h-4 rounded-md [&>div]:bg-[#4ca1af] top-[1.5px] [&>div]:rounded-none"
+                          className="h-4 rounded-md [&>div]:bg-[#4ca1af] top-[1px] [&>div]:rounded-none"
                         />
                       </div>
 
