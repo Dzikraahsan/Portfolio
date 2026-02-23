@@ -65,7 +65,7 @@ const Footer = () => {
     <footer className="py-8 px-4 border-t">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#eaebed]/90 text-sm">
+          <p className="text-[#eaebed]/90 text-[10px]">
             &copy; {currentYear} Dzikra Ahsan Imawan. All Rights Reserved.
           </p>
 

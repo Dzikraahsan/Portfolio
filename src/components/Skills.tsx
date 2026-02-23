@@ -250,7 +250,7 @@ const Skills = () => {
                   {category.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-5 pb-11 pl-10 pr-10  text-[#eaebed] ">
+              <CardContent className="space-y-5 pb-11 pl-6 pr-6  text-[#eaebed] ">
                 {category.skills.map((skill) => {
                   const tooltipId = `${category.title}-${skill.name}`;
                   const isOpen = openTooltip === tooltipId;
