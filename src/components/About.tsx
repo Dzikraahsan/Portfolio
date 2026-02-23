@@ -24,13 +24,13 @@ const About = () => {
             <CardContent className="p-8">
               <p className="text-[14px] md:text-lg text-center sm:text-center text-[#eaebed]/90 leading-relaxed mb-4">
                 I'm a 12th-grade student majoring in Software Engineering at
-                SMKN 1 Maja. I'm interested in front-heavy fullstack developer
-                and continue to hone my programming skills.
+                SMKN 1 Maja. I'm interested in front-end developer and continue
+                to hone my programming skills.
               </p>
               <p className="text-[14px] md:text-lg text-center sm:text-center text-[#eaebed]/90 leading-relaxed">
-                In the future, I'm determined to become a professional
-                front-heavy fullstack developer capable of creating useful and
-                innovative digital solutions.
+                In the future, I'm determined to become a professional front-end
+                developer capable of creating useful and innovative digital
+                solutions.
               </p>
             </CardContent>
           </Card>

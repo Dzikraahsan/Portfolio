@@ -278,7 +278,7 @@ const Skills = () => {
 
                         {isOpen && (
                           <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100] whitespace-nowrap animate-fade-in">
-                            <p className="-translate-y-[1px] md:-translate-y-[0.75px]">
+                            <p className="-translate-y-[0.5px] md:-translate-y-[0.5px]">
                               {skill.name}
                             </p>
                             <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-popover" />
