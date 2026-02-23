@@ -302,7 +302,7 @@ All colors MUST be HSL.
 @layer base {
     body {
         @apply bg-background text-foreground;
-        font-family: "eFootballSans-Regular", sans-serif !important;
+        font-family: "formular-bold", sans-serif !important;
     }
 
     html {

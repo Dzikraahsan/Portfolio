@@ -101,9 +101,11 @@ const Projects = () => {
                     <Badge
                       key={tech}
                       variant="outline"
-                      className="hover:bg-[#4ca1af]  text-[#eaebed] hover:text-[#eaebed]"
+                      className="hover:bg-[#4ca1af] text-[#eaebed] hover:text-[#eaebed]"
                     >
-                      <p className="-translate-y-[1px]">{tech}</p>
+                      <p className="-translate-y-[0.5px] text-[10px] justify-center">
+                        {tech}
+                      </p>
                     </Badge>
                   ))}
                 </div>

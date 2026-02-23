@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className="container mx-auto text-center">
         <div className="mb-8 animate-fade-in">
-          <h1 className="text-[21px] md:text-[48px] text-[#eaebed] font-bold mb-2">
+          <h1 className="text-[20px] md:text-[48px] text-[#eaebed] font-bold mb-2">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r text-[#4ca1af] formular-bold">
               DZIKRA AHSAN IMAWAN
@@ -19,8 +19,8 @@ const Hero = () => {
             Front-End Developer
           </p>
           <p className="text-[12.75px] md:text-[16px] text-[#eaebed]/80 max-w-[20rem] md:max-w-[45rem] mx-auto">
-            I am interested in front-heavy fullstack developer and continue to
-            hone my programming skills.
+            I am interested in front-end developer and continue to hone my
+            programming skills.
           </p>
         </div>
 

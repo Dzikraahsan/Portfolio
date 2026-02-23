@@ -68,11 +68,6 @@ const Skills = () => {
       title: "Frontend",
       skills: [
         {
-          name: "React JS",
-          logoUrl: "https://cdn.simpleicons.org/react/61DAFB",
-          percentage: 43,
-        },
-        {
           name: "CSS",
           logoUrl: "https://cdn.simpleicons.org/css/06B6D4",
           percentage: 80,
@@ -138,6 +133,11 @@ const Skills = () => {
       title: "Framework",
       skills: [
         {
+          name: "React JS",
+          logoUrl: "https://cdn.simpleicons.org/react/61DAFB",
+          percentage: 64,
+        },
+        {
           name: "Laravel",
           logoUrl: "https://cdn.simpleicons.org/laravel/FF2D20",
           percentage: 70,
@@ -160,7 +160,7 @@ const Skills = () => {
         {
           name: "Tailwind CSS",
           logoUrl: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
-          percentage: 44,
+          percentage: 62,
         },
       ],
     },
@@ -210,7 +210,8 @@ const Skills = () => {
         },
         {
           name: "Canva",
-          logoUrl: "https://cdn.simpleicons.org/canva/00C4CC",
+          logoUrl:
+            "https://res.cloudinary.com/da4fjxm1e/image/upload/v1771837340/canva-logo-white_gwfrvm.png",
           percentage: 89,
         },
       ],
@@ -293,9 +294,7 @@ const Skills = () => {
                       </div>
 
                       <div className="w-8 text-right">
-                        <span className="efootball-sans-bold text-sm">
-                          {skill.percentage}%
-                        </span>
+                        <span className="text-sm">{skill.percentage}%</span>
                       </div>
                     </div>
                   );
