@@ -62,51 +62,62 @@ const Footer = () => {
   }, [isTouch]);
 
   return (
-    <footer className="py-8 px-4 border-t">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#eaebed]/90 text-[11px]">
-            &copy; {currentYear} Dzikra Ahsan Imawan. All Rights Reserved.
-          </p>
+    <footer className="py-8 px-4">
+      <div>
+        <div
+          className="top-0 left-0 w-full h-px
+                        bg-gradient-to-r
+                        from-transparent
+                        via-gray-100
+                        to-transparent
+                        dark:via-gray-100
+                        mt-8"
+        ></div>
+        <div className="container mx-auto pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-[#eaebed]/90 text-[11px]">
+              &copy; {currentYear} Dzikra Ahsan Imawan. All Rights Reserved.
+            </p>
 
-          <div className="flex items-center gap-2">
-            {socialLinks.map((social) => {
-              const Icon = social.icon;
-              const isOpen = openTooltip === social.name;
+            <div className="flex items-center gap-2">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                const isOpen = openTooltip === social.name;
 
-              return (
-                <div key={social.name} className="relative">
-                  <a
-                    href={social.href}
-                    target={
-                      social.href.startsWith("mailto:") ? undefined : "_blank"
-                    }
-                    rel={
-                      social.href.startsWith("mailto:")
-                        ? undefined
-                        : "noopener noreferrer"
-                    }
-                    data-social-icon
-                    className={`flex items-center justify-center w-10 h-10 rounded-md bg-transparent text-[#eaebed] hover:bg-[#4ca1af] transition-transform duration-200 ${
-                      isOpen ? "scale-110" : "hover:scale-110"
-                    }`}
-                    aria-label={social.name}
-                    onTouchEnd={(e) => handleTouch(e, social.name)}
-                    onMouseEnter={() => handleMouseEnter(social.name)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
+                return (
+                  <div key={social.name} className="relative">
+                    <a
+                      href={social.href}
+                      target={
+                        social.href.startsWith("mailto:") ? undefined : "_blank"
+                      }
+                      rel={
+                        social.href.startsWith("mailto:")
+                          ? undefined
+                          : "noopener noreferrer"
+                      }
+                      data-social-icon
+                      className={`flex items-center justify-center w-10 h-10 rounded-md bg-transparent text-[#eaebed] hover:bg-[#4ca1af] transition-transform duration-200 ${
+                        isOpen ? "scale-110" : "hover:scale-110"
+                      }`}
+                      aria-label={social.name}
+                      onTouchEnd={(e) => handleTouch(e, social.name)}
+                      onMouseEnter={() => handleMouseEnter(social.name)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
 
-                  {isOpen && (
-                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100] whitespace-nowrap animate-fade-in">
-                      {social.name}
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-popover" />
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                    {isOpen && (
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 text-xs sm:text-sm font-medium bg-popover text-popover-foreground border border-border shadow-lg rounded-md z-[100] whitespace-nowrap animate-fade-in">
+                        {social.name}
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-popover" />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

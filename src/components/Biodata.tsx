@@ -40,7 +40,17 @@ const Biodata = () => {
                   </div>
                 ))}
 
-                <div className="mt-8 pt-4 border-t border-border/40">
+                <div
+                  className="top-0 left-0 w-full h-px
+                        bg-gradient-to-r
+                        from-transparent
+                        via-gray-600
+                        to-transparent
+                        dark:via-gray-600
+                        mt-8"
+                ></div>
+
+                <div className="mt-8 pt-4">
                   <p className="text-[12px] md:text-base italic text-[#eaebed]/80 text-center">
                     "Don’t aim to be perfect. Aim to be better than yesterday."
                   </p>

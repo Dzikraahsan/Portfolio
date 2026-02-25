@@ -31,6 +31,13 @@ const Projects = () => {
       isRealProject: true,
     },
     {
+      title: "FinanceHUb",
+      description: "Website for personal financial health at a glance.",
+      technologies: ["React JS", "Vite", "TypeScript", "Tailwind CSS"],
+      github: "https://github.com/Dzikraahsan/Finance-flow",
+      demo: "https://finance-flow-beryl.vercel.app/",
+    },
+    {
       title: "Portfolio",
       description:
         "Personal portfolio website created using HTML, CSS, and Javascript.",
@@ -103,7 +110,7 @@ const Projects = () => {
                       variant="outline"
                       className="hover:bg-[#4ca1af] text-[#eaebed] hover:text-[#eaebed]"
                     >
-                      <p className="-translate-y-[0.5px] text-[10px] justify-center">
+                      <p className="sm:-translate-y-[0.5px] md:translate-y-[0px] text-[10px] justify-center">
                         {tech}
                       </p>
                     </Badge>
