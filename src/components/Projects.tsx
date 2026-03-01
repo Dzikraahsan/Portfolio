@@ -31,7 +31,7 @@ const Projects = () => {
       isRealProject: true,
     },
     {
-      title: "FinanceHUb",
+      title: "Finance Hub",
       description: "Website for personal financial health at a glance.",
       technologies: ["React JS", "Vite", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/Dzikraahsan/Finance-flow",
