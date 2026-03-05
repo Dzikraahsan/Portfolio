@@ -8,9 +8,9 @@ const VideoBackground = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    let direction: 1 | -1 = 1; // 1 = forward, -1 = reverse
-    const FPS = 30; // target fps visual
-    const STEP = 1 / FPS; // detik per frame
+    let direction: 1 | -1 = 1; 
+    const FPS = 30; 
+    const STEP = 1 / FPS; 
 
     const animate = () => {
       if (!video.duration) {
@@ -34,7 +34,7 @@ const VideoBackground = () => {
     };
 
     const onReady = () => {
-      video.pause(); // ⬅️ PENTING: matikan playback native
+      video.pause(); 
       video.currentTime = 0;
       rafRef.current = requestAnimationFrame(animate);
     };

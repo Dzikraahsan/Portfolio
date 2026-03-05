@@ -79,8 +79,3 @@
 .monaco-workbench .explorer-viewlet [role="treeitem"] .monaco-icon-label .label-description {
    font-family: "Pretendard" !important;
 }
-
-.monaco-workbench .explorer-viewlet .monaco-icon-label .file-icon,
-.monaco-workbench .explorer-viewlet .file-icon {
-
-}
